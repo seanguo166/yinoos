@@ -64,7 +64,7 @@ function lib_channelartlist(&$ctag,&$refObj)
     //获得类别ID总数的信息
     $typeids = array();
     if($typeid==0 || $typeid=='top') {
-        $tpsql = " reid=0 AND ispart<>2 AND ishidden<>1 AND channeltype>0 ";
+        $tpsql = " reid=0 AND ishidden<>1 AND channeltype>0 ";
     }
     else
     {
@@ -91,6 +91,12 @@ function lib_channelartlist(&$ctag,&$refObj)
         $GLOBALS['itemindex']++;
         $pv = new PartView($typeids[$i]['id']);
         $pv->Fields['typeurl'] = GetOneTypeUrlA($typeids[$i]);
+if($typeids[$i]['id'] == $refObj->TypeLink->TypeInfos['id'] || $typeids[$i]['id'] == $refObj->TypeLink->TypeInfos['topid'] ){
+            $pv->Fields['currentstyle'] = $currentstyle ? $currentstyle : 'current';
+        }
+        else{
+            $pv->Fields['currentstyle'] = '';
+        }		
         $pv->SetTemplet($innertext,'string');
         $artlist .= $pv->GetResult();
         $GLOBALS['itemparity'] = ($GLOBALS['itemparity']==1 ? 2 : 1);

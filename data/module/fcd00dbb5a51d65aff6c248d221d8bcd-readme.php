@@ -1,5 +1,5 @@
 <p style='line-height:150%'><p style='line-height:150%'><div style='padding-left:20px;line-height:150%'><br /><br />
-<p>版权所有 &copy;2003-2011，DedeCms.com 保留所有权利。 </p><br /><br />
+<p>版权所有 &#169;2003-2011，DedeCms.com 保留所有权利。 </p><br /><br />
 <p>感谢您选择织梦内容管理系统（以下简称DedeCms），DedeCms是目前国内最强大、最稳定的中小型门户网站建设解决方案之一，居于 PHP + MySQL 的技术开发，全部源码开放。DedeCms 的官方网址是： www.dedecms.com  交流论坛： bbs.dedecms.com</p><br /><br />
 <p>为了使你正确并合法的使用本软件，请你在使用前务必阅读清楚下面的协议条款：</p><br /><br />
 <p><strong>一、本授权协议适用且仅适用于 DedeCms 5.x.x 版本，DedeCms官方对本授权协议的最终解释权。 </strong></p><br /><br />

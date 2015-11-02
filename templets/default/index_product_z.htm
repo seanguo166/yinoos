@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=gb2312" />
+<link type="text/css" rel="stylesheet" href="/dedemao/css/base.css" />
+<link type="text/css" rel="stylesheet" href="/dedemao/css/camera.css" />
+<link type="text/css" rel="stylesheet" href="/dedemao/css/easyDialog.css" />
+<script type="text/javascript" src="/dedemao/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/dedemao/js/template-global.js"></script>
+<script type="text/javascript" src="/dedemao/js/ShoppingCart.js"></script>
+<script type="text/javascript" src="/dedemao/js/jquery.pagination.js"></script>
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+</head>
+<body id="body" >
+<div id="Layout_846"  class=""> <script src="/dedemao/js/base.js" type="text/javascript"></script> 
+  <script type="text/javascript" src="/dedemao/js/jquery.easing.1.3.js"></script>
+  {dede:include filename="head.htm"/}
+  <div class="spec_bannerbox"> 
+    <script type="text/javascript">
+      $(function(){
+      $("#J_bslist3").bannerSlider({
+      width:"100%",//宽 (如果100%的时候请传入字符串)
+      height:551,//高
+      auto:true,//是否能自动滚
+      effect:"fade",//效果
+      Pause:3000,//停顿时间-两个动画滚动间隔的时间
+      animTime:250,//一张图滚动的时间
+      zIndex:10,//设置层级相互遮盖
+      parentClass:"cs-bannerWrap1",
+      pagination:{
+      show:false,
+      className:"banner-numlist"
+      },
+      btn:{
+      show:true,
+      dynamic:true//是否有鼠标移动上去显示箭头的效果
+      },
+      describe:{
+      show:true,
+      left:"80%",
+      bottom:0
+      }
+      })
+
+      })
+      </script>
+    <div>
+      <ul id="J_bslist3" class="bs_list3">
+        <li style="background:url(/dedemao/images/banner/b3.jpg) no-repeat  top center"><a href="javascript:void(0);"></a></li>
+        <li style="background:url(/dedemao/images/banner/b4.jpg) no-repeat  top center"><a href="javascript:void(0);"></a></li>
+        <li style="background:url(/dedemao/images/banner/b5.jpg) no-repeat  top center"><a href="javascript:void(0);"></a></li>
+        <li style="background:url(/dedemao/images/banner/b6.jpg) no-repeat  top center"><a href="javascript:void(0);"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sep_part white_bg">
+    <div class="sep_wrap">
+      <div class="dx_box">
+        <div class="h-contactIntrobox">
+          <div class="sun_titbox">
+            <h2> 我们的优势 </h2>
+            <span>advantage</span>
+            <p> 雨后春笋掌销宝，基于移动互联全渠道营销思想，整合APP客户端、IM微官（微信、易信）和HTML5移动网站三大入口的移动互联网营销模式于同一平台，为企业提供一站式移动互联网营销服务 </p>
+          </div>
+          <div class="dx_fsep">
+            <div class="ta_t tab_tit clearfix"> <span>HTML5移动网站</span> <span>IM微官</span> <span class="last">APP客户端</span> </div>
+            <div class="ta_sep tab_then">
+              <div class="item clearfix">
+                <div class="item-box-1">
+                  <h1> HTML5移动网站 </h1>
+                  <p> <span>● 移动网站随心建：</span>各行业海量精美模板，随心选、随心换 </p>
+                  <p> <span>● 自动适配各终端：</span>PC与手机站可共用一个域名，自动适配各个终端 </p>
+                  <p> <span>● 移动市场抢新机：</span>抢占6亿移动市场，手机搜索样样有你 </p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-box-2">
+                  <h1> IM微官 </h1>
+                  <p> <span>● 多公众平台：</span>支持跨行业、多公众号统一平台管理 </p>
+                  <p> <span>● 行业定制化：</span>针对各行业开发个性化的微信营销功能 </p>
+                  <p> <span>● 营销多元化：</span>众多移动营销功能，配合企业开展多样化营销 </p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-box-3">
+                  <h1> APP客户端 </h1>
+                  <p> <span>● APP推送直达客户：</span>企业信息及时推送，直达目标客户群体 </p>
+                  <p> <span>● 生成手机桌面图标：</span>抢占移动桌面入口，企业宣传随时随地 </p>
+                  <p> <span>● 定制化欢迎页：</span>高大上的定制欢迎首页，提升企业品牌形象 </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sep_part gray_bg">
+    <div class="sep_wrap">
+      <div class="dx_box">
+        <div class="h-contactIntrobox">
+          <div class="sun_titbox">
+            <h2> 功能特性 </h2>
+            <span>features</span>
+            <p> 雨后春笋全销宝，集传统互联网和移动互联网营销于一体，整合网站PC、APP客户端、IM微官（微信、易信）和HTML5移动网站，助力企业开展新一代全网营销。 </p>
+          </div>
+          <div class="sep_spritbox">
+            <ul class="sep_spritlist clearfix">
+              <li class="first"> <a href=""> <i class="sl_01"></i> <span>企业APP</span>
+                <p> 不需任何技术
+                  1分钟免费在线生成 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_02"></i> <span>微网站</span>
+                <p> 全功能覆盖
+                  不仅仅只是微官网 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_03"></i> <span>微营销</span>
+                <p> 创意活动做起来
+                  互动粉丝涨起来 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_04"></i> <span>微信墙</span>
+                <p> 现场气氛嗨起来
+                  活动举办传播广 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_05"></i> <span>电子会员卡</span>
+                <p> 方便携带，永不挂失
+                  消费积分一卡配备 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_06"></i> <span>微餐饮</span>
+                <p> 实时在线点菜预约
+                  省时、省力、更省心 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_07"></i> <span>微商城</span>
+                <p> 移动互联也有大电商
+                  企业轻松入住 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_08"></i> <span>微支付</span>
+                <p> 整合多种在线支付
+                  支付就这么简单 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_09"></i> <span>微外卖</span>
+                <p> 在线点单，在线支付
+                  智能外卖So Easy </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_10"></i> <span>微汽车</span>
+                <p> 预约试驾或保养、360度看车
+                  应有尽有 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_11"></i> <span>微团购</span>
+                <p> 掌上团购
+                  规则由我掌握 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_12"></i> <span>微邀请</span>
+                <p> 电子邀请函、请帖 
+                  提供给用户特色服务 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_13"></i> <span>微信多客服</span>
+                <p> 沟通6亿用户
+                  创造无限商机 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_14"></i> <span>微统计</span>
+                <p> 企业的数据仓储
+                  轻松了解用户 </p>
+                </a> </li>
+              <li> <a href=""> <i class="sl_15"></i> <span>微调研</span>
+                <p> 调研+活动
+                  真知灼见及时了解 </p>
+                </a> </li>
+            </ul>           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sep_part white_bg">
+    <div class="sep_wrap">
+      <div class="dx_box">
+        <div id="Panel_526"  class="" style="clear:both;overflow:hidden;">
+          <div class="sun_titbox">
+            <h2>经典案例</h2>
+            <span>our case</span>
+            <p> </p>
+          </div>
+          <div class="sub-rollmainbox2">
+            <div class="spe_roll">
+              <ul class="spe_ulbo clearfix">
+                {dede:arclist typeid="16" titlelen=42 row=9}     
+                <li><a href="[field:arcurl/]" target="_blank"><img onload="loadImage(this,244,367);" src="[field:litpic/]" /></a></li>
+                 {/dede:arclist}                
+              </ul>
+            </div>
+            <a href="javascript:void(0)" class="roll-pre"></a> <a href="javascript:void(0)" class="roll-next"></a> </div>
+          <script type="text/javascript">
+      $(function(){
+      $(".sub-rollmainbox2").caseFunc({
+      dirLeft:"roll-pre",
+      dirRight:"roll-next",
+      listClass:"spe_ulbo",
+      viewLen:4
+      })
+      })
+      </script>
+          <div class="review_bottonbox"> <a href="{dede:type typeid='16'}[field:typeurl /]{/dede:type}" class="button green big">更多案例</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {dede:include filename="footer.htm"/}
+  
+</div>
+
+</body>
+</html>
