@@ -3,18 +3,18 @@
 $db_host   = "localhost:3306";
 
 // database name
-$db_name   = "meilele_2";
+$db_name   = "yinoos";
 
 // database username
 $db_user   = "root";
 
 // database password
-$db_pass   = "123456";
+$db_pass   = "device16599708";
 
 // table prefix
 $prefix    = "ecs_";
 
-$timezone    = "UTC";
+$timezone    = "Asia/Shanghai";
 
 $cookie_path    = "/";
 
@@ -24,13 +24,12 @@ $session = "1440";
 
 define('EC_CHARSET','utf-8');
 
-// Æä²ÅÍøÂç http://suqiannet.taobao.com  ÏêÇé×ÉÑ¯QQ249699062
 define('ADMIN_PATH','admin');
 
 define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2015-01-07 13:44:42');
+define('API_TIME', '2015-11-07 19:05:20');
 
 ?>

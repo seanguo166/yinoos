@@ -2,6 +2,19 @@
 $data = array (
   0 => 
   array (
+    'cat_id' => '9',
+    'cat_name' => '网站公告',
+    'cat_type' => '1',
+    'keywords' => '',
+    'cat_desc' => '',
+    'sort_order' => '50',
+    'show_in_nav' => '0',
+    'parent_id' => '0',
+    'has_children' => '0',
+    'aricle_num' => '5',
+  ),
+  1 => 
+  array (
     'cat_id' => '10',
     'cat_name' => '晒家达人',
     'cat_type' => '1',
@@ -13,7 +26,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '8',
   ),
-  1 => 
+  2 => 
   array (
     'cat_id' => '11',
     'cat_name' => '家居资讯',
@@ -26,7 +39,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '8',
   ),
-  2 => 
+  3 => 
   array (
     'cat_id' => '1',
     'cat_name' => '系统分类',
@@ -39,7 +52,7 @@ $data = array (
     'has_children' => '2',
     'aricle_num' => '0',
   ),
-  3 => 
+  4 => 
   array (
     'cat_id' => '12',
     'cat_name' => '秀家',
@@ -51,19 +64,6 @@ $data = array (
     'parent_id' => '0',
     'has_children' => '0',
     'aricle_num' => '8',
-  ),
-  4 => 
-  array (
-    'cat_id' => '9',
-    'cat_name' => '网站公告',
-    'cat_type' => '1',
-    'keywords' => '',
-    'cat_desc' => '',
-    'sort_order' => '50',
-    'show_in_nav' => '0',
-    'parent_id' => '0',
-    'has_children' => '0',
-    'aricle_num' => '5',
   ),
   5 => 
   array (
@@ -93,19 +93,6 @@ $data = array (
   ),
   7 => 
   array (
-    'cat_id' => '4',
-    'cat_name' => '关于美乐乐',
-    'cat_type' => '5',
-    'keywords' => '',
-    'cat_desc' => '',
-    'sort_order' => '50',
-    'show_in_nav' => '0',
-    'parent_id' => '3',
-    'has_children' => '0',
-    'aricle_num' => '3',
-  ),
-  8 => 
-  array (
     'cat_id' => '5',
     'cat_name' => '新手指南',
     'cat_type' => '5',
@@ -117,7 +104,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '3',
   ),
-  9 => 
+  8 => 
   array (
     'cat_id' => '6',
     'cat_name' => '配送安装',
@@ -130,7 +117,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '3',
   ),
-  10 => 
+  9 => 
   array (
     'cat_id' => '7',
     'cat_name' => '售后服务',
@@ -143,10 +130,23 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '3',
   ),
-  11 => 
+  10 => 
   array (
     'cat_id' => '8',
     'cat_name' => '购物保障',
+    'cat_type' => '5',
+    'keywords' => '',
+    'cat_desc' => '',
+    'sort_order' => '50',
+    'show_in_nav' => '0',
+    'parent_id' => '3',
+    'has_children' => '0',
+    'aricle_num' => '3',
+  ),
+  11 => 
+  array (
+    'cat_id' => '4',
+    'cat_name' => '关于美乐乐',
     'cat_type' => '5',
     'keywords' => '',
     'cat_desc' => '',

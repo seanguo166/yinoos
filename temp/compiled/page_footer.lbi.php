@@ -60,12 +60,12 @@ if ($this->_foreach['shop_help']['total'] > 0):
   </div>
   <?php endif; ?>
   <div class="w footer-copy"> 
-  <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_14613900_1420464310');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
+  <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_18018200_1446894885');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['nav_bottom_list']['total'] > 0):
-    foreach ($_from AS $this->_var['nav_0_14613900_1420464310']):
+    foreach ($_from AS $this->_var['nav_0_18018200_1446894885']):
         $this->_foreach['nav_bottom_list']['iteration']++;
 ?>
-  <a href="<?php echo $this->_var['nav_0_14613900_1420464310']['url']; ?>"  <?php if ($this->_var['nav_0_14613900_1420464310']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_14613900_1420464310']['name']; ?></a><?php if (! ($this->_foreach['nav_bottom_list']['iteration'] == $this->_foreach['nav_bottom_list']['total'])): ?> | <?php endif; ?>
+  <a href="<?php echo $this->_var['nav_0_18018200_1446894885']['url']; ?>"  <?php if ($this->_var['nav_0_18018200_1446894885']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_18018200_1446894885']['name']; ?></a><?php if (! ($this->_foreach['nav_bottom_list']['iteration'] == $this->_foreach['nav_bottom_list']['total'])): ?> | <?php endif; ?>
   <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
   
   <br />

@@ -1,11 +1,11 @@
-<?php exit;?>a:3:{s:8:"template";a:5:{i:0;s:39:"E:/ECSHOP/sc13/themes/meilele/index.dwt";i:1;s:53:"E:/ECSHOP/sc13/themes/meilele/library/page_header.lbi";i:2;s:54:"E:/ECSHOP/sc13/themes/meilele/library/cat_articles.lbi";i:3;s:51:"E:/ECSHOP/sc13/themes/meilele/library/cat_goods.lbi";i:4;s:53:"E:/ECSHOP/sc13/themes/meilele/library/page_footer.lbi";}s:7:"expires";i:1420641945;s:8:"maketime";i:1420638345;}<!DOCTYPE HTML>
+<?php exit;?>a:3:{s:8:"template";a:5:{i:0;s:45:"/var/www/html/yinoos/themes/meilele/index.dwt";i:1;s:59:"/var/www/html/yinoos/themes/meilele/library/page_header.lbi";i:2;s:60:"/var/www/html/yinoos/themes/meilele/library/cat_articles.lbi";i:3;s:57:"/var/www/html/yinoos/themes/meilele/library/cat_goods.lbi";i:4;s:59:"/var/www/html/yinoos/themes/meilele/library/page_footer.lbi";}s:7:"expires";i:1446898485;s:8:"maketime";i:1446894885;}<!DOCTYPE HTML>
 <html>
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="utf-8">
-<meta name="Keywords" content="美乐乐源码第二版,美乐乐网站模板,美乐乐源码下载,商城源码,ECSHOP模板" />
-<meta name="Description" content="美乐乐网站模板源码第二版由美乐乐出品" />
-<title>美乐乐第二版源码,高端大气行业ECSHOP商城模板,家具建材家居商城源码下载-美乐乐 - Powered by ECShop</title>
+<meta name="Keywords" content="家具城,网上高档家具城,网上买高档家具,高档家具网站" />
+<meta name="Description" content="依诺斯网上家具城官网-中国最大高档家具网购商城！为大家提供在线销售欧式家具,美式家具,现代家具,古典家具,餐厅/卧室/儿童房家具......正品家具品牌产品，网上买家具就去依诺斯高档家具商城。" />
+<title>YINOOS 依诺斯网上高档家具城 买家具去哪个网站好,网上买家具就去依诺斯 - Powered by ECShop</title>
 <script src="themes/meilele/js/jq.js?1119"></script>
 <link rel="stylesheet" href="themes/meilele/css/mll_common.min.css?1122" />
 <link rel="stylesheet" href="themes/meilele/index.css" />
@@ -159,7 +159,7 @@ function drop_cart_goods(id)
     <div class="allGoodsCat Left" id="JS_common_head_menu_812" class="hover"> <a href="javascript:;" class="menuEvent"><strong class="catName">全部商品分类</strong><span class="arrow"></span></a>
       <div class="expandMenu" id="JS_head_expand_menu_target"></div>
     </div>
-    <div class="allMenu Left"> <a id="JS_Header_Home_Link" href="/" title="首页" class="index current">首页</a><a href="category-1-b0.html"   style="position:relative;">家具城</a><a href="category-2-b0.html"   style="position:relative;">建材城</a><a href="brand.html"   style="position:relative;">品牌中心</a><a href="group_buy.php"   style="position:relative;">团购<img src="themes/meilele/images/new4.gif" style="position:absolute;background:none;right:0px;top:-5px;" /></a><a href="topic.php?topic_id=1"   style="position:relative;">促销<img src="themes/meilele/images/hot.gif" style="position:absolute;background:none;right:0px;top:-5px;" /></a><a href="article_cat-11.html"   style="position:relative;">家居资讯</a><a href="http://" target="_blank"   style="position:relative;">源码购买</a> </div>
+    <div class="allMenu Left"> <a id="JS_Header_Home_Link" href="/" title="首页" class="index current">首页</a><a href="category.php?id=1"   style="position:relative;">家具城</a><a href="category.php?id=2"   style="position:relative;">建材城</a><a href="brand.php"   style="position:relative;">品牌中心</a><a href="group_buy.php"   style="position:relative;">团购<img src="themes/meilele/images/new4.gif" style="position:absolute;background:none;right:0px;top:-5px;" /></a><a href="topic.php?topic_id=1"   style="position:relative;">促销<img src="themes/meilele/images/hot.gif" style="position:absolute;background:none;right:0px;top:-5px;" /></a><a href="article_cat.php?id=11"   style="position:relative;">家居资讯</a> </div>
     <div class="sideMenu2 Right"><a class="menu" href="xspace.php" title="">秀家</a><a class="menu" href="auction.php" target="_blank" title="">拍卖</a></div>
   </div>
 </div>
@@ -177,14 +177,14 @@ function drop_cart_goods(id)
 	<div class="all_cat">
 	    			<div class="list JS_catItem">
 				<dl class="cat">
-					<dt class="catName"><strong class="cat1 Left"><a href="category-1-b0.html" target="_blank" title="">家具</a></strong><span class="Right">&gt;</span></dt>
-					<dd class="catList"><a href="category-4-b0.html" target="_blank" title="卧室">卧室</a>&emsp;
-					<a href="category-5-b0.html" target="_blank" title="客厅">客厅</a>&emsp;
-					<a href="category-6-b0.html" target="_blank" title="餐厅">餐厅</a>&emsp;
-					<a href="category-7-b0.html" target="_blank" title="书房">书房</a>&emsp;
-					<a href="category-8-b0.html" target="_blank" title="儿童房">儿童房</a>&emsp;
-					<a href="category-9-b0.html" target="_blank" title="户外家具">户外家具</a>&emsp;
-					<a href="category-10-b0.html" target="_blank" title="定制家具">定制家具</a>&emsp;
+					<dt class="catName"><strong class="cat1 Left"><a href="category.php?id=1" target="_blank" title="">家具</a></strong><span class="Right">&gt;</span></dt>
+					<dd class="catList"><a href="category.php?id=4" target="_blank" title="卧室">卧室</a>&emsp;
+					<a href="category.php?id=5" target="_blank" title="客厅">客厅</a>&emsp;
+					<a href="category.php?id=6" target="_blank" title="餐厅">餐厅</a>&emsp;
+					<a href="category.php?id=7" target="_blank" title="书房">书房</a>&emsp;
+					<a href="category.php?id=8" target="_blank" title="儿童房">儿童房</a>&emsp;
+					<a href="category.php?id=9" target="_blank" title="户外家具">户外家具</a>&emsp;
+					<a href="category.php?id=10" target="_blank" title="定制家具">定制家具</a>&emsp;
 					</dd>
 				</dl>
 				<div id="JS_globa_goods_cat_target_1" class="hideMap">
@@ -193,70 +193,70 @@ function drop_cart_goods(id)
 								<div class="col">
 										
 									<dl class="item no_border">
-										<dt class="dt"><a href="category-4-b0.html" class="red">卧室</a></dt>
+										<dt class="dt"><a href="category.php?id=4" class="red">卧室</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-23-b0.html">床</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-24-b0.html">床垫</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-25-b0.html">床头柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=23">床</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=24">床垫</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=25">床头柜</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-5-b0.html" class="red">客厅</a></dt>
+										<dt class="dt"><a href="category.php?id=5" class="red">客厅</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-26-b0.html">沙发</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-27-b0.html">茶几/边桌</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-28-b0.html">电视柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=26">沙发</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=27">茶几/边桌</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=28">电视柜</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-6-b0.html" class="red">餐厅</a></dt>
+										<dt class="dt"><a href="category.php?id=6" class="red">餐厅</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-29-b0.html">餐桌</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-30-b0.html">餐椅</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-31-b0.html">餐边柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=29">餐桌</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=30">餐椅</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=31">餐边柜</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-7-b0.html" class="red">书房</a></dt>
+										<dt class="dt"><a href="category.php?id=7" class="red">书房</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-32-b0.html">书桌/工作台</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-33-b0.html">书柜/书架</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-34-b0.html">书椅/转椅</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=32">书桌/工作台</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=33">书柜/书架</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=34">书椅/转椅</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-8-b0.html" class="red">儿童房</a></dt>
+										<dt class="dt"><a href="category.php?id=8" class="red">儿童房</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-35-b0.html">儿童床</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-36-b0.html">儿童床头柜</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-37-b0.html">儿童衣柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=35">儿童床</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=36">儿童床头柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=37">儿童衣柜</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-9-b0.html" class="red">户外家具</a></dt>
+										<dt class="dt"><a href="category.php?id=9" class="red">户外家具</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-38-b0.html">吊篮/吊椅</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-39-b0.html">休闲桌</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-40-b0.html">休闲椅</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=38">吊篮/吊椅</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=39">休闲桌</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=40">休闲椅</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-10-b0.html" class="red">定制家具</a></dt>
+										<dt class="dt"><a href="category.php?id=10" class="red">定制家具</a></dt>
 										<dd class="dd">
-																					<span>|&ensp;<a href="category-41-b0.html">定制橱柜</a>&ensp;</span>
-																					<span>|&ensp;<a href="category-42-b0.html">定制书柜/书台</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=41">定制橱柜</a>&ensp;</span>
+																					<span>|&ensp;<a href="category.php?id=42">定制书柜/书台</a>&ensp;</span>
 																	
 										</dd>
 									</dl>
@@ -284,13 +284,13 @@ function drop_cart_goods(id)
 		    </div>
 		    			<div class="list JS_catItem">
 				<dl class="cat">
-					<dt class="catName"><strong class="cat1 Left"><a href="category-2-b0.html" target="_blank" title="">建材城</a></strong><span class="Right">&gt;</span></dt>
-					<dd class="catList"><a href="category-11-b0.html" target="_blank" title="灯饰照明">灯饰照明</a>&emsp;
-					<a href="category-12-b0.html" target="_blank" title="厨房用品">厨房用品</a>&emsp;
-					<a href="category-13-b0.html" target="_blank" title="卫浴用品">卫浴用品</a>&emsp;
-					<a href="category-14-b0.html" target="_blank" title="五金电器">五金电器</a>&emsp;
-					<a href="category-15-b0.html" target="_blank" title="墙地面">墙地面</a>&emsp;
-					<a href="category-16-b0.html" target="_blank" title="五金工具">五金工具</a>&emsp;
+					<dt class="catName"><strong class="cat1 Left"><a href="category.php?id=2" target="_blank" title="">建材城</a></strong><span class="Right">&gt;</span></dt>
+					<dd class="catList"><a href="category.php?id=11" target="_blank" title="灯饰照明">灯饰照明</a>&emsp;
+					<a href="category.php?id=12" target="_blank" title="厨房用品">厨房用品</a>&emsp;
+					<a href="category.php?id=13" target="_blank" title="卫浴用品">卫浴用品</a>&emsp;
+					<a href="category.php?id=14" target="_blank" title="五金电器">五金电器</a>&emsp;
+					<a href="category.php?id=15" target="_blank" title="墙地面">墙地面</a>&emsp;
+					<a href="category.php?id=16" target="_blank" title="五金工具">五金工具</a>&emsp;
 					</dd>
 				</dl>
 				<div id="JS_globa_goods_cat_target_1" class="hideMap">
@@ -299,42 +299,42 @@ function drop_cart_goods(id)
 								<div class="col">
 										
 									<dl class="item no_border">
-										<dt class="dt"><a href="category-11-b0.html" class="red">灯饰照明</a></dt>
+										<dt class="dt"><a href="category.php?id=11" class="red">灯饰照明</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-12-b0.html" class="red">厨房用品</a></dt>
+										<dt class="dt"><a href="category.php?id=12" class="red">厨房用品</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-13-b0.html" class="red">卫浴用品</a></dt>
+										<dt class="dt"><a href="category.php?id=13" class="red">卫浴用品</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-14-b0.html" class="red">五金电器</a></dt>
+										<dt class="dt"><a href="category.php?id=14" class="red">五金电器</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-15-b0.html" class="red">墙地面</a></dt>
+										<dt class="dt"><a href="category.php?id=15" class="red">墙地面</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-16-b0.html" class="red">五金工具</a></dt>
+										<dt class="dt"><a href="category.php?id=16" class="red">五金工具</a></dt>
 										<dd class="dd">
 																	
 										</dd>
@@ -359,13 +359,13 @@ function drop_cart_goods(id)
 		    </div>
 		    			<div class="list JS_catItem">
 				<dl class="cat">
-					<dt class="catName"><strong class="cat1 Left"><a href="category-3-b0.html" target="_blank" title="">家居家饰</a></strong><span class="Right">&gt;</span></dt>
-					<dd class="catList"><a href="category-17-b0.html" target="_blank" title="床上用品">床上用品</a>&emsp;
-					<a href="category-18-b0.html" target="_blank" title="居家日用">居家日用</a>&emsp;
-					<a href="category-19-b0.html" target="_blank" title="布艺织物">布艺织物</a>&emsp;
-					<a href="category-20-b0.html" target="_blank" title="家居饰品">家居饰品</a>&emsp;
-					<a href="category-21-b0.html" target="_blank" title="厨房餐饮">厨房餐饮</a>&emsp;
-					<a href="category-22-b0.html" target="_blank" title="生活电器">生活电器</a>&emsp;
+					<dt class="catName"><strong class="cat1 Left"><a href="category.php?id=3" target="_blank" title="">家居家饰</a></strong><span class="Right">&gt;</span></dt>
+					<dd class="catList"><a href="category.php?id=17" target="_blank" title="床上用品">床上用品</a>&emsp;
+					<a href="category.php?id=18" target="_blank" title="居家日用">居家日用</a>&emsp;
+					<a href="category.php?id=19" target="_blank" title="布艺织物">布艺织物</a>&emsp;
+					<a href="category.php?id=20" target="_blank" title="家居饰品">家居饰品</a>&emsp;
+					<a href="category.php?id=21" target="_blank" title="厨房餐饮">厨房餐饮</a>&emsp;
+					<a href="category.php?id=22" target="_blank" title="生活电器">生活电器</a>&emsp;
 					</dd>
 				</dl>
 				<div id="JS_globa_goods_cat_target_1" class="hideMap">
@@ -374,42 +374,42 @@ function drop_cart_goods(id)
 								<div class="col">
 										
 									<dl class="item no_border">
-										<dt class="dt"><a href="category-17-b0.html" class="red">床上用品</a></dt>
+										<dt class="dt"><a href="category.php?id=17" class="red">床上用品</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-18-b0.html" class="red">居家日用</a></dt>
+										<dt class="dt"><a href="category.php?id=18" class="red">居家日用</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-19-b0.html" class="red">布艺织物</a></dt>
+										<dt class="dt"><a href="category.php?id=19" class="red">布艺织物</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-20-b0.html" class="red">家居饰品</a></dt>
+										<dt class="dt"><a href="category.php?id=20" class="red">家居饰品</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-21-b0.html" class="red">厨房餐饮</a></dt>
+										<dt class="dt"><a href="category.php?id=21" class="red">厨房餐饮</a></dt>
 										<dd class="dd">
 																	
 										</dd>
 									</dl>
 										
 									<dl class="item ">
-										<dt class="dt"><a href="category-22-b0.html" class="red">生活电器</a></dt>
+										<dt class="dt"><a href="category.php?id=22" class="red">生活电器</a></dt>
 										<dd class="dd">
 																	
 										</dd>
@@ -509,8 +509,7 @@ _onReadyList.push( function(){
 		$('#JS_MLL_search_header_input').unbind('focus');
 	});
 } )
-</script>
-<script language="javascript">
+</script><script language="javascript">
 document.getElementById('globa_submenu').style.display = 'none';
 </script>
 <div class="slide_banner root_table" >
@@ -551,11 +550,11 @@ document.getElementById('globa_submenu').style.display = 'none';
         <div class="show_news tBody current">
           <ul class="gg ">
             
-<li><a href="article-62.html" title="美乐乐发布美乐乐第二版源码通告">美乐乐发布美乐乐第二版源码通告</a></li>
-<li><a href="article-63.html" title="美乐乐第二版官方唯一购买地址！">美乐乐第二版官方唯一购买地址！</a></li>
-<li><a href="article-24.html" title="第266家体验馆花落牡丹江！">第266家体验馆花落牡丹江！</a></li>
-<li><a href="article-23.html" title="中原大地再迎新馆！美乐乐第265">中原大地再迎新馆！美乐乐第265</a></li>
-<li><a href="article-22.html" title="美乐乐第262家体验馆空降古都许">美乐乐第262家体验馆空降古都许</a></li>
+<li><a href="article.php?id=62" title="天源发布美乐乐第二版源码通告">天源发布美乐乐第二版源码通告</a></li>
+<li><a href="article.php?id=63" title="美乐乐多色版官方唯一购买地址！">美乐乐多色版官方唯一购买地址！</a></li>
+<li><a href="article.php?id=24" title="第266家体验馆花落牡丹江！">第266家体验馆花落牡丹江！</a></li>
+<li><a href="article.php?id=23" title="中原大地再迎新馆！美乐乐第265">中原大地再迎新馆！美乐乐第265</a></li>
+<li><a href="article.php?id=22" title="美乐乐第262家体验馆空降古都许">美乐乐第262家体验馆空降古都许</a></li>
           </ul>
         </div>
         <div class="tBody query">
@@ -579,23 +578,23 @@ document.getElementById('globa_submenu').style.display = 'none';
     <div class="header_bg clearfix"><i class="l_bg"></i><i class="r_bg"></i></div>
     <div class="body week_body">
 	      <div class="goods4_list first">
-        <div class="img"><span class="yahei"><strong>6.7</strong><br>折</span><a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a> </div>
-        <p class="info"><a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
+        <div class="img"><span class="yahei"><strong>6.7</strong><br>折</span><a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a> </div>
+        <p class="info"><a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
           本站价：<span class="yen red"></span><strong class="pr red">¥3999.00</strong></p>
       </div>
           <div class="goods4_list first">
-        <div class="img"><a href="goods-16.html" target="_blank" title="方形木艺灯罩吸顶灯"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201312/thumb_img/16_thumb_G_1386157479619.jpg" alt="方形木艺灯罩吸顶灯" /></a> </div>
-        <p class="info"><a href="goods-16.html" target="_blank" title="方形木艺灯罩吸顶灯">方形木艺灯罩吸顶灯</a><br />
+        <div class="img"><a href="goods.php?id=16" target="_blank" title="方形木艺灯罩吸顶灯"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201312/thumb_img/16_thumb_G_1386157479619.jpg" alt="方形木艺灯罩吸顶灯" /></a> </div>
+        <p class="info"><a href="goods.php?id=16" target="_blank" title="方形木艺灯罩吸顶灯">方形木艺灯罩吸顶灯</a><br />
           本站价：<span class="yen red"></span><strong class="pr red">¥380.00</strong></p>
       </div>
           <div class="goods4_list first">
-        <div class="img"><a href="goods-2.html" target="_blank" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/2_thumb_G_1385536310716.jpg" alt="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床" /></a> </div>
-        <p class="info"><a href="goods-2.html" target="_blank" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床">欧式田园	1.8米水晶拉扣双人床 水...</a><br />
+        <div class="img"><a href="goods.php?id=2" target="_blank" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/2_thumb_G_1385536310716.jpg" alt="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床" /></a> </div>
+        <p class="info"><a href="goods.php?id=2" target="_blank" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床">欧式田园	1.8米水晶拉扣双人床 水...</a><br />
           本站价：<span class="yen red"></span><strong class="pr red">¥3580.00</strong></p>
       </div>
           <div class="goods4_list first">
-        <div class="img"><a href="goods-24.html" target="_blank" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" /></a> </div>
-        <p class="info"><a href="goods-24.html" target="_blank" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a><br />
+        <div class="img"><a href="goods.php?id=24" target="_blank" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" /></a> </div>
+        <p class="info"><a href="goods.php?id=24" target="_blank" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a><br />
           本站价：<span class="yen red"></span><strong class="pr red">¥4999.00</strong></p>
       </div>
       
@@ -616,7 +615,7 @@ document.getElementById('globa_submenu').style.display = 'none';
 						<div class="img"><a href="affiche.php?ad_id=3&uri=group_buy.php?act=view&id=2" target="_blank" title="首页-团购广告"><img src="/themes/meilele/images/blank.gif" data-src2="/data/afficheimg/1385561496734639703.jpg" width="210" height="192" alt="首页-团购广告" /></a></div>
 									              <div class="cont">
                 <div class="Left"> <span>团购价:</span><span class="yen"></span><strong class="price">¥1800.00</strong> </div>
-                <div class="Right"><a href="group_buy-4.html" target="_blank" title="参团"></a></div>
+                <div class="Right"><a href="group_buy.php?act=view&amp;id=4" target="_blank" title="参团"></a></div>
               </div>
 			  
 			  
@@ -637,41 +636,41 @@ document.getElementById('globa_submenu').style.display = 'none';
               <div class="limit_time_container clearfix"> <i class="limit_icon"></i>
                 <div class="leaveTime time_area c JS_leaveTime" data-timeline="86400">剩余<span class="digital">00</span>时<span class="digital">00</span>分<span class="digital">00</span>秒</div>
               </div>
-              <div class="img"> <a href="goods-13.html" target="_blank" title="餐厅5件套装（1.5餐台+4无扶手餐椅）"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201312/thumb_img/13_thumb_G_1386083574489.jpg" alt="餐厅5件套装（1.5餐台+4无扶手餐椅）" /></a>
+              <div class="img"> <a href="goods.php?id=13" target="_blank" title="餐厅5件套装（1.5餐台+4无扶手餐椅）"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201312/thumb_img/13_thumb_G_1386083574489.jpg" alt="餐厅5件套装（1.5餐台+4无扶手餐椅）" /></a>
                 <div class="layer"></div>
               </div>
-              <div class="info"> <a href="goods-13.html" target="_blank" title="餐厅5件套装（1.5餐台+4无扶手餐椅）">餐厅5件套装（1.5餐台+4无扶手餐...</a><br />
+              <div class="info"> <a href="goods.php?id=13" target="_blank" title="餐厅5件套装（1.5餐台+4无扶手餐椅）">餐厅5件套装（1.5餐台+4无扶手餐...</a><br />
                 抢购价：<span class="yen red"></span><strong class="pr red">¥6800.00</strong> </div>
             </div></td>
 		          <td><div class="goods4_list first">
               <div class="limit_time_container clearfix"> <i class="limit_icon"></i>
                 <div class="leaveTime time_area c JS_leaveTime" data-timeline="86400">剩余<span class="digital">00</span>时<span class="digital">00</span>分<span class="digital">00</span>秒</div>
               </div>
-              <div class="img"> <a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a>
+              <div class="img"> <a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a>
                 <div class="layer"></div>
               </div>
-              <div class="info"> <a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
+              <div class="info"> <a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
                 抢购价：<span class="yen red"></span><strong class="pr red">¥3999.00</strong> </div>
             </div></td>
 		          <td><div class="goods4_list first">
               <div class="limit_time_container clearfix"> <i class="limit_icon"></i>
                 <div class="leaveTime time_area c JS_leaveTime" data-timeline="86400">剩余<span class="digital">00</span>时<span class="digital">00</span>分<span class="digital">00</span>秒</div>
               </div>
-              <div class="img"> <a href="goods-28.html" target="_blank" title="[优曼]	 一起走过的日子全棉喷气印花四件套 "><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201407/thumb_img/28_thumb_G_1406722470340.jpg" alt="[优曼]	 一起走过的日子全棉喷气印花四件套 " /></a>
+              <div class="img"> <a href="goods.php?id=12" target="_blank" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" /></a>
                 <div class="layer"></div>
               </div>
-              <div class="info"> <a href="goods-28.html" target="_blank" title="[优曼]	 一起走过的日子全棉喷气印花四件套 ">[优曼]	 一起走过的日子全棉喷气印...</a><br />
-                抢购价：<span class="yen red"></span><strong class="pr red">¥280.00</strong> </div>
+              <div class="info"> <a href="goods.php?id=12" target="_blank" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a><br />
+                抢购价：<span class="yen red"></span><strong class="pr red">¥5600.00</strong> </div>
             </div></td>
 		          <td><div class="goods4_list first">
               <div class="limit_time_container clearfix"> <i class="limit_icon"></i>
                 <div class="leaveTime time_area c JS_leaveTime" data-timeline="86400">剩余<span class="digital">00</span>时<span class="digital">00</span>分<span class="digital">00</span>秒</div>
               </div>
-              <div class="img"> <a href="goods-12.html" target="_blank" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" /></a>
+              <div class="img"> <a href="goods.php?id=21" target="_blank" title="全铜可360度旋转厨房水龙头 单把单孔冷热水龙头"><img src="/themes/meilele/images/blank.gif"  data-src2="/images/201312/thumb_img/21_thumb_G_1386157760818.jpg" alt="全铜可360度旋转厨房水龙头 单把单孔冷热水龙头" /></a>
                 <div class="layer"></div>
               </div>
-              <div class="info"> <a href="goods-12.html" target="_blank" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a><br />
-                抢购价：<span class="yen red"></span><strong class="pr red">¥5600.00</strong> </div>
+              <div class="info"> <a href="goods.php?id=21" target="_blank" title="全铜可360度旋转厨房水龙头 单把单孔冷热水龙头">全铜可360度旋转厨房水龙头 单把单...</a><br />
+                抢购价：<span class="yen red"></span><strong class="pr red">¥100.00</strong> </div>
             </div></td>
 			
          
@@ -689,10 +688,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 			<div class="recommend_goods_list">
 						 						  <dl>
 								<dt>
-									<a href="goods-1.html"><img src="images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" class="goodsimg" /></a>
+									<a href="goods.php?id=1"><img src="images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-1.html" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=1" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥3999.00</font>
 																			</div>
@@ -700,10 +699,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-32.html"><img src="images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" class="goodsimg" /></a>
+									<a href="goods.php?id=32"><img src="images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-32.html" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=32" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥28.00</font>
 																			</div>
@@ -711,10 +710,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-30.html"><img src="images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" class="goodsimg" /></a>
+									<a href="goods.php?id=30"><img src="images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-30.html" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=30" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥178.00</font>
 																			</div>
@@ -722,10 +721,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-31.html"><img src="images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" class="goodsimg" /></a>
+									<a href="goods.php?id=31"><img src="images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-31.html" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=31" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥84.00</font>
 																			</div>
@@ -733,10 +732,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-29.html"><img src="images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" class="goodsimg" /></a>
+									<a href="goods.php?id=29"><img src="images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-29.html" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=29" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥148.00</font>
 																			</div>
@@ -744,21 +743,21 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-28.html"><img src="images/201407/thumb_img/28_thumb_G_1406722470340.jpg" alt="[优曼]	 一起走过的日子全棉喷气印花四件套 " class="goodsimg" /></a>
+									<a href="goods.php?id=28"><img src="images/201407/thumb_img/28_thumb_G_1406722470340.jpg" alt="[优曼]	 一起走过的日子全棉喷气印花四件套 " class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-28.html" title="[优曼]	 一起走过的日子全棉喷气印花四件套 ">[优曼]	 一起走过的日子全棉喷气印...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=28" title="[优曼]	 一起走过的日子全棉喷气印花四件套 ">[优曼]	 一起走过的日子全棉喷气印...</a></div>
 									<div class="cat_goods_price">
-										特价：										<font class="shop_s">¥280.00</font>
+										特价：										<font class="shop_s">¥300.00</font>
 																			</div>
 								</dd>
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-27.html"><img src="images/201407/thumb_img/27_thumb_G_1406698120858.jpg" alt="[木木原]中式风格 实木双人床 纽西兰松木床" class="goodsimg" /></a>
+									<a href="goods.php?id=27"><img src="images/201407/thumb_img/27_thumb_G_1406698120858.jpg" alt="[木木原]中式风格 实木双人床 纽西兰松木床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-27.html" title="[木木原]中式风格 实木双人床 纽西兰松木床">[木木原]中式风格 实木双人床 纽西...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=27" title="[木木原]中式风格 实木双人床 纽西兰松木床">[木木原]中式风格 实木双人床 纽西...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥999.00</font>
 																			</div>
@@ -766,10 +765,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-12.html"><img src="images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" class="goodsimg" /></a>
+									<a href="goods.php?id=12"><img src="images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-12.html" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=12" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥5600.00</font>
 																			</div>
@@ -788,10 +787,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 			<div class="recommend_goods_list">
 						 						  <dl>
 								<dt>
-									<a href="goods-1.html"><img src="images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" class="goodsimg" /></a>
+									<a href="goods.php?id=1"><img src="images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-1.html" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=1" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥3999.00</font>
 																			</div>
@@ -799,10 +798,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-16.html"><img src="images/201312/thumb_img/16_thumb_G_1386157479619.jpg" alt="方形木艺灯罩吸顶灯" class="goodsimg" /></a>
+									<a href="goods.php?id=16"><img src="images/201312/thumb_img/16_thumb_G_1386157479619.jpg" alt="方形木艺灯罩吸顶灯" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-16.html" title="方形木艺灯罩吸顶灯">方形木艺灯罩吸顶灯</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=16" title="方形木艺灯罩吸顶灯">方形木艺灯罩吸顶灯</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥380.00</font>
 																			</div>
@@ -810,10 +809,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-2.html"><img src="images/201311/thumb_img/2_thumb_G_1385536310716.jpg" alt="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床" class="goodsimg" /></a>
+									<a href="goods.php?id=2"><img src="images/201311/thumb_img/2_thumb_G_1385536310716.jpg" alt="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-2.html" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床">欧式田园	1.8米水晶拉扣双人床 水...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=2" title="欧式田园	1.8米水晶拉扣双人床 水牛头层真皮床">欧式田园	1.8米水晶拉扣双人床 水...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥3580.00</font>
 																			</div>
@@ -821,10 +820,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-24.html"><img src="images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" class="goodsimg" /></a>
+									<a href="goods.php?id=24"><img src="images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-24.html" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=24" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥4999.00</font>
 																			</div>
@@ -832,10 +831,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-25.html"><img src="images/201312/thumb_img/25_thumb_G_1386157973309.jpg" alt="	虹吸式坐厕 连体双档座便器 节水马桶" class="goodsimg" /></a>
+									<a href="goods.php?id=25"><img src="images/201312/thumb_img/25_thumb_G_1386157973309.jpg" alt="	虹吸式坐厕 连体双档座便器 节水马桶" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-25.html" title="	虹吸式坐厕 连体双档座便器 节水马桶">虹吸式坐厕 连体双档座便器 节水马桶</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=25" title="	虹吸式坐厕 连体双档座便器 节水马桶">虹吸式坐厕 连体双档座便器 节水马桶</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥996.00</font>
 																			</div>
@@ -843,10 +842,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-20.html"><img src="images/201312/thumb_img/20_thumb_G_1386157724025.jpg" alt="SUS304水槽带水龙头套装 带混水龙头双水槽套装72*38CM" class="goodsimg" /></a>
+									<a href="goods.php?id=20"><img src="images/201312/thumb_img/20_thumb_G_1386157724025.jpg" alt="SUS304水槽带水龙头套装 带混水龙头双水槽套装72*38CM" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-20.html" title="SUS304水槽带水龙头套装 带混水龙头双水槽套装72*38CM">SUS304水槽带水龙头套装 带混水...</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=20" title="SUS304水槽带水龙头套装 带混水龙头双水槽套装72*38CM">SUS304水槽带水龙头套装 带混水...</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥480.00</font>
 																			</div>
@@ -854,10 +853,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-5.html"><img src="images/201311/thumb_img/5_thumb_G_1385536549941.jpg" alt="地中海风格 美国进口白杨木双人床" class="goodsimg" /></a>
+									<a href="goods.php?id=5"><img src="images/201311/thumb_img/5_thumb_G_1385536549941.jpg" alt="地中海风格 美国进口白杨木双人床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-5.html" title="地中海风格 美国进口白杨木双人床">地中海风格 美国进口白杨木双人床</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=5" title="地中海风格 美国进口白杨木双人床">地中海风格 美国进口白杨木双人床</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥1000.00</font>
 																			</div>
@@ -865,10 +864,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 						  </dl>
 						  						  <dl>
 								<dt>
-									<a href="goods-6.html"><img src="images/201311/thumb_img/6_thumb_G_1385536616257.jpg" alt="现代风格	1.8米软床 头层牛皮床" class="goodsimg" /></a>
+									<a href="goods.php?id=6"><img src="images/201311/thumb_img/6_thumb_G_1385536616257.jpg" alt="现代风格	1.8米软床 头层牛皮床" class="goodsimg" /></a>
 								</dt>
 								<dd>
-									<div class="cat_goods_name"><a href="goods-6.html" title="现代风格	1.8米软床 头层牛皮床">现代风格	1.8米软床 头层牛皮床</a></div>
+									<div class="cat_goods_name"><a href="goods.php?id=6" title="现代风格	1.8米软床 头层牛皮床">现代风格	1.8米软床 头层牛皮床</a></div>
 									<div class="cat_goods_price">
 										特价：										<font class="shop_s">¥1800.00</font>
 																			</div>
@@ -882,7 +881,7 @@ document.getElementById('globa_submenu').style.display = 'none';
 <div class="w mt20 floor1 floor2 cat_floor">
   <div class="header clearfix">
     <div class="Left"><a class="title" href="category.php?id=1" target="_blank"></a></div>
-    <div class="Right"><span class="words">&emsp;<a href="category-4-b0.html" target="_blank">卧室</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-5-b0.html" target="_blank">客厅</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-6-b0.html" target="_blank">餐厅</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-7-b0.html" target="_blank">书房</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-8-b0.html" target="_blank">儿童房</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-9-b0.html" target="_blank">户外家具</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-10-b0.html" target="_blank">定制家具</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-1-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
+    <div class="Right"><span class="words">&emsp;<a href="category.php?id=4" target="_blank">卧室</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=5" target="_blank">客厅</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=6" target="_blank">餐厅</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=7" target="_blank">书房</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=8" target="_blank">儿童房</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=9" target="_blank">户外家具</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=10" target="_blank">定制家具</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-1-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
   </div>
   <div class="main_new"> <a class="f_a_1" href="affiche.php?ad_id=20&uri=" target="_blank" title="首页-分类ID1-左侧广告"><img class="f_img_1" src="/images/blank.gif" data-src2="/data/afficheimg/1385565216752788626.jpg" /></a><span class="f_a_2"><span class="st"><span class="nav" id="JS_floor_focus_nav_1"><a class="current" href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a></span><span>
     <table id="JS_floor_focus_stage_1">
@@ -892,7 +891,7 @@ document.getElementById('globa_submenu').style.display = 'none';
               <td><a href="affiche.php?ad_id=23&uri=" target="_blank" title="首页-分类ID1-中间广告3"><img src="/images/blank.gif" data-src2="/data/afficheimg/1385565325784594312.jpg" /></a></td>
             </tr>
     </table>
-    </span></span></span><a class="f_a_3" href="affiche.php?ad_id=24&uri=http://m2.7u7u7u.com.cn/goods-2.html" target="_blank" title="首页-分类ID1-右侧广告"><img class="f_img_3" src="/images/blank.gif" data-src2="/data/afficheimg/1385565388950769615.jpg" /></a> 
+    </span></span></span><a class="f_a_3" href="affiche.php?ad_id=24&uri=http://m2.i7c.com.cn/goods-2.html" target="_blank" title="首页-分类ID1-右侧广告"><img class="f_img_3" src="/images/blank.gif" data-src2="/data/afficheimg/1385565388950769615.jpg" /></a> 
 	
 	
 	
@@ -900,10 +899,10 @@ document.getElementById('globa_submenu').style.display = 'none';
   	<div class="cat_goods_list1">
 				 				  <dl>
 						<dt>
-							<a href="goods-13.html"><img src="images/201312/thumb_img/13_thumb_G_1386083574489.jpg" alt="餐厅5件套装（1.5餐台+4无扶手餐椅）" class="goodsimg" /></a>
+							<a href="goods.php?id=13"><img src="images/201312/thumb_img/13_thumb_G_1386083574489.jpg" alt="餐厅5件套装（1.5餐台+4无扶手餐椅）" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-13.html" title="餐厅5件套装（1.5餐台+4无扶手餐椅）">餐厅5件套装（1.5餐台+4无扶手餐...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=13" title="餐厅5件套装（1.5餐台+4无扶手餐椅）">餐厅5件套装（1.5餐台+4无扶手餐...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥6800.00</font>
 															</div>
@@ -911,10 +910,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-27.html"><img src="images/201407/thumb_img/27_thumb_G_1406698120858.jpg" alt="[木木原]中式风格 实木双人床 纽西兰松木床" class="goodsimg" /></a>
+							<a href="goods.php?id=27"><img src="images/201407/thumb_img/27_thumb_G_1406698120858.jpg" alt="[木木原]中式风格 实木双人床 纽西兰松木床" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-27.html" title="[木木原]中式风格 实木双人床 纽西兰松木床">[木木原]中式风格 实木双人床 纽西...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=27" title="[木木原]中式风格 实木双人床 纽西兰松木床">[木木原]中式风格 实木双人床 纽西...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥999.00</font>
 															</div>
@@ -922,10 +921,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-14.html"><img src="images/201312/thumb_img/14_thumb_G_1386083649941.jpg" alt="美式田园	实木餐厅套装（1桌+4椅）" class="goodsimg" /></a>
+							<a href="goods.php?id=14"><img src="images/201312/thumb_img/14_thumb_G_1386083649941.jpg" alt="美式田园	实木餐厅套装（1桌+4椅）" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-14.html" title="美式田园	实木餐厅套装（1桌+4椅）">美式田园	实木餐厅套装（1桌+4椅）</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=14" title="美式田园	实木餐厅套装（1桌+4椅）">美式田园	实木餐厅套装（1桌+4椅）</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥2999.00</font>
 															</div>
@@ -933,10 +932,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-12.html"><img src="images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" class="goodsimg" /></a>
+							<a href="goods.php?id=12"><img src="images/201312/thumb_img/12_thumb_G_1386083510264.jpg" alt="餐厅6件套（1餐桌+4餐椅+1餐边柜）" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-12.html" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=12" title="餐厅6件套（1餐桌+4餐椅+1餐边柜）">餐厅6件套（1餐桌+4餐椅+1餐边柜...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥5600.00</font>
 															</div>
@@ -944,10 +943,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-11.html"><img src="images/201312/thumb_img/11_thumb_G_1386083439490.jpg" alt="橡胶木实木餐桌椅套装（七件套）" class="goodsimg" /></a>
+							<a href="goods.php?id=11"><img src="images/201312/thumb_img/11_thumb_G_1386083439490.jpg" alt="橡胶木实木餐桌椅套装（七件套）" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-11.html" title="橡胶木实木餐桌椅套装（七件套）">橡胶木实木餐桌椅套装（七件套）</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=11" title="橡胶木实木餐桌椅套装（七件套）">橡胶木实木餐桌椅套装（七件套）</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥4800.00</font>
 															</div>
@@ -961,11 +960,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 	
 	
 	</div>
-</div>
-<div class="w mt20 floor1 floor2 cat_floor">
+</div><div class="w mt20 floor1 floor2 cat_floor">
   <div class="header clearfix">
     <div class="Left"><a class="title" href="category.php?id=2" target="_blank"></a></div>
-    <div class="Right"><span class="words">&emsp;<a href="category-11-b0.html" target="_blank">灯饰照明</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-12-b0.html" target="_blank">厨房用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-13-b0.html" target="_blank">卫浴用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-14-b0.html" target="_blank">五金电器</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-15-b0.html" target="_blank">墙地面</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-16-b0.html" target="_blank">五金工具</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-2-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
+    <div class="Right"><span class="words">&emsp;<a href="category.php?id=11" target="_blank">灯饰照明</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=12" target="_blank">厨房用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=13" target="_blank">卫浴用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=14" target="_blank">五金电器</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=15" target="_blank">墙地面</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=16" target="_blank">五金工具</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-2-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
   </div>
   <div class="main_new"> <a class="f_a_1" href="affiche.php?ad_id=79&uri=" target="_blank" title="首页-分类ID2-左侧广告"><img class="f_img_1" src="/images/blank.gif" data-src2="/data/afficheimg/1386081752958196621.jpg" /></a><span class="f_a_2"><span class="st"><span class="nav" id="JS_floor_focus_nav_2"><a class="current" href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a></span><span>
     <table id="JS_floor_focus_stage_2">
@@ -983,10 +981,10 @@ document.getElementById('globa_submenu').style.display = 'none';
   	<div class="cat_goods_list1">
 				 				  <dl>
 						<dt>
-							<a href="goods-26.html"><img src="images/201407/thumb_img/26_thumb_G_1406698568855.jpg" alt="纯白实木浴室柜 现代方形浴室柜 落地式浴室柜" class="goodsimg" /></a>
+							<a href="goods.php?id=26"><img src="images/201407/thumb_img/26_thumb_G_1406698568855.jpg" alt="纯白实木浴室柜 现代方形浴室柜 落地式浴室柜" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-26.html" title="纯白实木浴室柜 现代方形浴室柜 落地式浴室柜">纯白实木浴室柜 现代方形浴室柜 落地...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=26" title="纯白实木浴室柜 现代方形浴室柜 落地式浴室柜">纯白实木浴室柜 现代方形浴室柜 落地...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥1690.00</font>
 															</div>
@@ -994,10 +992,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-25.html"><img src="images/201312/thumb_img/25_thumb_G_1386157973309.jpg" alt="	虹吸式坐厕 连体双档座便器 节水马桶" class="goodsimg" /></a>
+							<a href="goods.php?id=25"><img src="images/201312/thumb_img/25_thumb_G_1386157973309.jpg" alt="	虹吸式坐厕 连体双档座便器 节水马桶" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-25.html" title="	虹吸式坐厕 连体双档座便器 节水马桶">虹吸式坐厕 连体双档座便器 节水马桶</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=25" title="	虹吸式坐厕 连体双档座便器 节水马桶">虹吸式坐厕 连体双档座便器 节水马桶</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥996.00</font>
 															</div>
@@ -1005,10 +1003,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-24.html"><img src="images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" class="goodsimg" /></a>
+							<a href="goods.php?id=24"><img src="images/201312/thumb_img/24_thumb_G_1386157931809.jpg" alt="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-24.html" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=24" title="双人多功能按摩浴缸 亚克力浴缸 双裙边（左裙）浴缸">双人多功能按摩浴缸 亚克力浴缸 双裙...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥4999.00</font>
 															</div>
@@ -1016,10 +1014,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-23.html"><img src="images/201312/thumb_img/23_thumb_G_1386157899021.jpg" alt="橡木爵士白雕刻卫浴柜 方形双人浴室柜 欧式落地浴室柜" class="goodsimg" /></a>
+							<a href="goods.php?id=23"><img src="images/201312/thumb_img/23_thumb_G_1386157899021.jpg" alt="橡木爵士白雕刻卫浴柜 方形双人浴室柜 欧式落地浴室柜" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-23.html" title="橡木爵士白雕刻卫浴柜 方形双人浴室柜 欧式落地浴室柜">橡木爵士白雕刻卫浴柜 方形双人浴室柜...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=23" title="橡木爵士白雕刻卫浴柜 方形双人浴室柜 欧式落地浴室柜">橡木爵士白雕刻卫浴柜 方形双人浴室柜...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥6470.00</font>
 															</div>
@@ -1027,10 +1025,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-22.html"><img src="images/201312/thumb_img/22_thumb_G_1386157797079.jpg" alt="厨房不锈钢双水槽套装76*40CM" class="goodsimg" /></a>
+							<a href="goods.php?id=22"><img src="images/201312/thumb_img/22_thumb_G_1386157797079.jpg" alt="厨房不锈钢双水槽套装76*40CM" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-22.html" title="厨房不锈钢双水槽套装76*40CM">厨房不锈钢双水槽套装76*40CM</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=22" title="厨房不锈钢双水槽套装76*40CM">厨房不锈钢双水槽套装76*40CM</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥338.00</font>
 															</div>
@@ -1048,7 +1046,7 @@ document.getElementById('globa_submenu').style.display = 'none';
 <div class="w mt20 floor1 floor2 cat_floor">
   <div class="header clearfix">
     <div class="Left"><a class="title" href="category.php?id=3" target="_blank"></a></div>
-    <div class="Right"><span class="words">&emsp;<a href="category-17-b0.html" target="_blank">床上用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-18-b0.html" target="_blank">居家日用</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-19-b0.html" target="_blank">布艺织物</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-20-b0.html" target="_blank">家居饰品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-21-b0.html" target="_blank">厨房餐饮</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category-22-b0.html" target="_blank">生活电器</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-3-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
+    <div class="Right"><span class="words">&emsp;<a href="category.php?id=17" target="_blank">床上用品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=18" target="_blank">居家日用</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=19" target="_blank">布艺织物</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=20" target="_blank">家居饰品</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=21" target="_blank">厨房餐饮</a>&emsp;<span style="color:#ddd">|</span>&emsp;<a href="category.php?id=22" target="_blank">生活电器</a>&emsp;<span style="color:#ddd">|</span></span><a class="more" href="category-3-b0.html" target="_blank" style="color:#cc0200">更多产品</a></div>
   </div>
   <div class="main_new"> <a class="f_a_1" href="affiche.php?ad_id=89&uri=" target="_blank" title="首页-分类ID3-左侧广告"><img class="f_img_1" src="/images/blank.gif" data-src2="/data/afficheimg/1386082116637576384.jpg" /></a><span class="f_a_2"><span class="st"><span class="nav" id="JS_floor_focus_nav_3"><a class="current" href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a></span><span>
     <table id="JS_floor_focus_stage_3">
@@ -1066,10 +1064,10 @@ document.getElementById('globa_submenu').style.display = 'none';
   	<div class="cat_goods_list1">
 				 				  <dl>
 						<dt>
-							<a href="goods-32.html"><img src="images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" class="goodsimg" /></a>
+							<a href="goods.php?id=32"><img src="images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-32.html" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=32" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥28.00</font>
 															</div>
@@ -1077,10 +1075,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-31.html"><img src="images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" class="goodsimg" /></a>
+							<a href="goods.php?id=31"><img src="images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-31.html" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=31" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥84.00</font>
 															</div>
@@ -1088,10 +1086,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-30.html"><img src="images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" class="goodsimg" /></a>
+							<a href="goods.php?id=30"><img src="images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-30.html" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=30" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥178.00</font>
 															</div>
@@ -1099,10 +1097,10 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-29.html"><img src="images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" class="goodsimg" /></a>
+							<a href="goods.php?id=29"><img src="images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-29.html" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=29" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a></div>
 							<div class="cat_goods_price">
 								特价：								<font class="shop_s">¥148.00</font>
 															</div>
@@ -1110,12 +1108,12 @@ document.getElementById('globa_submenu').style.display = 'none';
 				  </dl>
 				  				  <dl>
 						<dt>
-							<a href="goods-28.html"><img src="images/201407/thumb_img/28_thumb_G_1406722470340.jpg" alt="[优曼]	 一起走过的日子全棉喷气印花四件套 " class="goodsimg" /></a>
+							<a href="goods.php?id=28"><img src="images/201407/thumb_img/28_thumb_G_1406722470340.jpg" alt="[优曼]	 一起走过的日子全棉喷气印花四件套 " class="goodsimg" /></a>
 						</dt>
 						<dd>
-							<div class="cat_goods_name"><a href="goods-28.html" title="[优曼]	 一起走过的日子全棉喷气印花四件套 ">[优曼]	 一起走过的日子全棉喷气印...</a></div>
+							<div class="cat_goods_name"><a href="goods.php?id=28" title="[优曼]	 一起走过的日子全棉喷气印花四件套 ">[优曼]	 一起走过的日子全棉喷气印...</a></div>
 							<div class="cat_goods_price">
-								特价：								<font class="shop_s">¥280.00</font>
+								特价：								<font class="shop_s">¥300.00</font>
 															</div>
 						</dd>
 				  </dl>
@@ -1141,28 +1139,28 @@ $('.cat_floor').each(
   <div class="head"><strong class="name"><a href="search.php?intro=new" title="今日新品" target="_black">今日新品</a></strong></div>
   <div class="body">
       <div class="goods4_list mt20 first">
-      <div class="img"><span class="yahei"><strong>6.7</strong><br>折</span><a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a> </div>
-      <div class="info"> <a href="goods-1.html" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
+      <div class="img"><span class="yahei"><strong>6.7</strong><br>折</span><a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201311/thumb_img/1_thumb_G_1385536232130.jpg" alt="美式古典	双面描金雕花排骨架床" /></a> </div>
+      <div class="info"> <a href="goods.php?id=1" target="_blank" title="美式古典	双面描金雕花排骨架床">美式古典	双面描金雕花排骨架床</a><br />
         特价：<span class="yen red"></span><strong class="pr red">¥3999.00</strong> </div>
     </div>
 	    <div class="goods4_list mt20 ">
-      <div class="img"><a href="goods-32.html" target="_blank" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" /></a> </div>
-      <div class="info"> <a href="goods-32.html" target="_blank" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a><br />
+      <div class="img"><a href="goods.php?id=32" target="_blank" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/32_thumb_G_1406724021887.jpg" alt="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红" /></a> </div>
+      <div class="info"> <a href="goods.php?id=32" target="_blank" title="[SFMOBUL安君美]	 百变吊带可穿浴巾 140*70cm 粉红">[SFMOBUL安君美]	 百变吊带...</a><br />
         特价：<span class="yen red"></span><strong class="pr red">¥28.00</strong> </div>
     </div>
 	    <div class="goods4_list mt20 ">
-      <div class="img"><a href="goods-30.html" target="_blank" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" /></a> </div>
-      <div class="info"> <a href="goods-30.html" target="_blank" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a><br />
+      <div class="img"><a href="goods.php?id=30" target="_blank" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/30_thumb_G_1406722990658.jpg" alt="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰" /></a> </div>
+      <div class="info"> <a href="goods.php?id=30" target="_blank" title="[悦邻家居]	 欧式奢华提花高档定制客厅卧室半遮光窗帘 素雅灰">[悦邻家居]	 欧式奢华提花高档定制...</a><br />
         特价：<span class="yen red"></span><strong class="pr red">¥178.00</strong> </div>
     </div>
 	    <div class="goods4_list mt20 ">
-      <div class="img"><a href="goods-31.html" target="_blank" title="[小日子]	 高档半遮光窗帘定制 速写英伦"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" /></a> </div>
-      <div class="info"> <a href="goods-31.html" target="_blank" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a><br />
+      <div class="img"><a href="goods.php?id=31" target="_blank" title="[小日子]	 高档半遮光窗帘定制 速写英伦"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/31_thumb_G_1406723378420.jpg" alt="[小日子]	 高档半遮光窗帘定制 速写英伦" /></a> </div>
+      <div class="info"> <a href="goods.php?id=31" target="_blank" title="[小日子]	 高档半遮光窗帘定制 速写英伦">[小日子]	 高档半遮光窗帘定制 速...</a><br />
         特价：<span class="yen red"></span><strong class="pr red">¥84.00</strong> </div>
     </div>
 	    <div class="goods4_list mt20 SCREEN-SHOW">
-      <div class="img"><a href="goods-29.html" target="_blank" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" /></a> </div>
-      <div class="info"> <a href="goods-29.html" target="_blank" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a><br />
+      <div class="img"><a href="goods.php?id=29" target="_blank" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）"><img src="/themes/meilele/images/blank.gif" data-src2="/images/201407/thumb_img/29_thumb_G_1406722713936.jpg" alt="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）" /></a> </div>
+      <div class="info"> <a href="goods.php?id=29" target="_blank" title="[唯萨] 花开富贵豪华宫廷不锈钢三开门蚊帐(1.5米床用）">[唯萨] 花开富贵豪华宫廷不锈钢三开...</a><br />
         特价：<span class="yen red"></span><strong class="pr red">¥148.00</strong> </div>
     </div>
 	 
@@ -1317,35 +1315,35 @@ $('.cat_floor').each(
           <table id="JS_focus_xspace_body" cellspacing="0" cellpadding="0">
             <tr>
 			              <td><div class="list first">
-                  <div class="img"><a href="article-32.html" target="_blank" title="&lt;76㎡小二居多图实拍细节&gt;小清新文艺范儿，十足的地中"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619637806187071.jpg" width="167" height="200" alt="&lt;76㎡小二居多图实拍细节&gt;小清新文艺范儿，十足的地中" /></a></div>
+                  <div class="img"><a href="article.php?id=32" target="_blank" title="&lt;76㎡小二居多图实拍细节&gt;小清新文艺范儿，十足的地中"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619637806187071.jpg" width="167" height="200" alt="&lt;76㎡小二居多图实拍细节&gt;小清新文艺范儿，十足的地中" /></a></div>
                   <p class="txt">&lt;76㎡小二居多图实拍细节&gt;小清新文艺范儿，十足的地中</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-31.html" target="_blank" title="7W换回一个美丽婚房，阳台变身休闲区，红红火火构建魅力"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619618912140726.jpg" width="167" height="200" alt="7W换回一个美丽婚房，阳台变身休闲区，红红火火构建魅力" /></a></div>
+                  <div class="img"><a href="article.php?id=31" target="_blank" title="7W换回一个美丽婚房，阳台变身休闲区，红红火火构建魅力"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619618912140726.jpg" width="167" height="200" alt="7W换回一个美丽婚房，阳台变身休闲区，红红火火构建魅力" /></a></div>
                   <p class="txt">7W换回一个美丽婚房，阳台变身休闲区，红红火火构建魅力</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-30.html" target="_blank" title="19万精装广州135㎡普罗旺斯浪漫地中海三居"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619598392949921.jpg" width="167" height="200" alt="19万精装广州135㎡普罗旺斯浪漫地中海三居" /></a></div>
+                  <div class="img"><a href="article.php?id=30" target="_blank" title="19万精装广州135㎡普罗旺斯浪漫地中海三居"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619598392949921.jpg" width="167" height="200" alt="19万精装广州135㎡普罗旺斯浪漫地中海三居" /></a></div>
                   <p class="txt">19万精装广州135㎡普罗旺斯浪漫地中海三居</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-29.html" target="_blank" title="单身女汉子独爱kitty猫儿，单身族居家必备神器！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619573913737966.jpg" width="167" height="200" alt="单身女汉子独爱kitty猫儿，单身族居家必备神器！" /></a></div>
+                  <div class="img"><a href="article.php?id=29" target="_blank" title="单身女汉子独爱kitty猫儿，单身族居家必备神器！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619573913737966.jpg" width="167" height="200" alt="单身女汉子独爱kitty猫儿，单身族居家必备神器！" /></a></div>
                   <p class="txt">单身女汉子独爱kitty猫儿，单身族居家必备神器！</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-28.html" target="_blank" title="高端大气上档次的现代简约装修 美爆了！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619554034454835.jpg" width="167" height="200" alt="高端大气上档次的现代简约装修 美爆了！" /></a></div>
+                  <div class="img"><a href="article.php?id=28" target="_blank" title="高端大气上档次的现代简约装修 美爆了！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619554034454835.jpg" width="167" height="200" alt="高端大气上档次的现代简约装修 美爆了！" /></a></div>
                   <p class="txt">高端大气上档次的现代简约装修 美爆了！</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-27.html" target="_blank" title="【主妇逆袭】简欧路上，7万123平装修中的零零碎碎（光荣"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619539098465248.jpg" width="167" height="200" alt="【主妇逆袭】简欧路上，7万123平装修中的零零碎碎（光荣" /></a></div>
+                  <div class="img"><a href="article.php?id=27" target="_blank" title="【主妇逆袭】简欧路上，7万123平装修中的零零碎碎（光荣"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619539098465248.jpg" width="167" height="200" alt="【主妇逆袭】简欧路上，7万123平装修中的零零碎碎（光荣" /></a></div>
                   <p class="txt">【主妇逆袭】简欧路上，7万123平装修中的零零碎碎（光荣</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-26.html" target="_blank" title="❤95㎡简约婚房❤拱形吊顶+欧式家具（基装+主材+家具清单"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619526838976334.jpg" width="167" height="200" alt="❤95㎡简约婚房❤拱形吊顶+欧式家具（基装+主材+家具清单" /></a></div>
+                  <div class="img"><a href="article.php?id=26" target="_blank" title="❤95㎡简约婚房❤拱形吊顶+欧式家具（基装+主材+家具清单"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619526838976334.jpg" width="167" height="200" alt="❤95㎡简约婚房❤拱形吊顶+欧式家具（基装+主材+家具清单" /></a></div>
                   <p class="txt">❤95㎡简约婚房❤拱形吊顶+欧式家具（基装+主材+家具清单</p>
                 </div></td>
 			              <td><div class="list ">
-                  <div class="img"><a href="article-25.html" target="_blank" title="【小苏的家】阳台改榻榻米，仅2.6w！五个月的装修长跑！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619509329401157.jpg" width="167" height="200" alt="【小苏的家】阳台改榻榻米，仅2.6w！五个月的装修长跑！" /></a></div>
+                  <div class="img"><a href="article.php?id=25" target="_blank" title="【小苏的家】阳台改榻榻米，仅2.6w！五个月的装修长跑！"><img src="/themes/meilele/images/blank.gif" data-src2="/data/article/1385619509329401157.jpg" width="167" height="200" alt="【小苏的家】阳台改榻榻米，仅2.6w！五个月的装修长跑！" /></a></div>
                   <p class="txt">【小苏的家】阳台改榻榻米，仅2.6w！五个月的装修长跑！</p>
                 </div></td>
 			 	
@@ -1523,19 +1521,19 @@ $('.cat_floor').each(
         </div>
         <div class="tabBody">
           <div class="notes clearfix">
-		              <div class="img"><a href="article-33.html" title="75平现代简约风格 白+蓝色" target="_blank"><img src="/themes/meilele/images/blank.gif" data-src="/data/article/1385817893665808062.jpg" alt="75平现代简约风格 白+蓝色" width="161" height="106" /></a></div>
-            <h3><a href="article-33.html" title="75平现代简约风格 白+蓝色" target="_blank">75平现代简约风格 白+蓝色</a></h3>
-            <p><a class="gray" href="article-33.html" title="75平现代简约风格 白+蓝色" target="_blank">现在的年轻人面临着城市的喧嚣和污染，激烈的竞争压力，还有忙碌的工作和紧张的生活。...</a></p>
+		              <div class="img"><a href="article.php?id=33" title="75平现代简约风格 白+蓝色" target="_blank"><img src="/themes/meilele/images/blank.gif" data-src="/data/article/1385817893665808062.jpg" alt="75平现代简约风格 白+蓝色" width="161" height="106" /></a></div>
+            <h3><a href="article.php?id=33" title="75平现代简约风格 白+蓝色" target="_blank">75平现代简约风格 白+蓝色</a></h3>
+            <p><a class="gray" href="article.php?id=33" title="75平现代简约风格 白+蓝色" target="_blank">现在的年轻人面临着城市的喧嚣和污染，激烈的竞争压力，还有忙碌的工作和紧张的生活。...</a></p>
 			          </div>
           <ul class="clearfix">
-		              <li class="gray">&bull;&ensp;<a class="gray" href="article-40.html" title="85后感谢设计师 89平浪漫清新" target="_blank">85后感谢设计师 89平浪漫清新</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-39.html" title="8万半包装的95平温暖简约3居" target="_blank">8万半包装的95平温暖简约3居</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-38.html" title="7万装60平小婚房 简约温馨气" target="_blank">7万装60平小婚房 简约温馨气</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-37.html" title="70平极致浪漫公寓 我的浪漫满" target="_blank">70平极致浪漫公寓 我的浪漫满</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-36.html" title="网友详谈二手房翻修" target="_blank">网友详谈二手房翻修</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-35.html" title="35平超精致小窝 小空间大梦想" target="_blank">35平超精致小窝 小空间大梦想</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-34.html" title="85后艺术温馨家 简单中的清新" target="_blank">85后艺术温馨家 简单中的清新</a></li>
-                      <li class="gray">&bull;&ensp;<a class="gray" href="article-33.html" title="75平现代简约风格 白+蓝色" target="_blank">75平现代简约风格 白+蓝色</a></li>
+		              <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=40" title="85后感谢设计师 89平浪漫清新" target="_blank">85后感谢设计师 89平浪漫清新</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=39" title="8万半包装的95平温暖简约3居" target="_blank">8万半包装的95平温暖简约3居</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=38" title="7万装60平小婚房 简约温馨气" target="_blank">7万装60平小婚房 简约温馨气</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=37" title="70平极致浪漫公寓 我的浪漫满" target="_blank">70平极致浪漫公寓 我的浪漫满</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=36" title="网友详谈二手房翻修" target="_blank">网友详谈二手房翻修</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=35" title="35平超精致小窝 小空间大梦想" target="_blank">35平超精致小窝 小空间大梦想</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=34" title="85后艺术温馨家 简单中的清新" target="_blank">85后艺术温馨家 简单中的清新</a></li>
+                      <li class="gray">&bull;&ensp;<a class="gray" href="article.php?id=33" title="75平现代简约风格 白+蓝色" target="_blank">75平现代简约风格 白+蓝色</a></li>
                     </ul>
         </div>
       </div>
@@ -1578,9 +1576,9 @@ $('#expr_list .body').each(
 		          <td><dl class="dl">
               <dt class="dt">关于美乐乐</dt>
               <dd class="dd"> 
-			                <a href="article-7.html" target="_blank">公司简介</a>
-                            <a href="article-8.html" target="_blank">体验馆</a>
-                            <a href="article-9.html" target="_blank">诚聘英才</a>
+			                <a href="article.php?id=7" target="_blank">公司简介</a>
+                            <a href="article.php?id=8" target="_blank">体验馆</a>
+                            <a href="article.php?id=9" target="_blank">诚聘英才</a>
                
 			  
 			  </dd>
@@ -1589,9 +1587,9 @@ $('#expr_list .body').each(
 		          <td><dl class="dl">
               <dt class="dt">新手指南</dt>
               <dd class="dd"> 
-			                <a href="article-10.html" target="_blank">注册新用户</a>
-                            <a href="article-11.html" target="_blank">订购家具流程</a>
-                            <a href="article-12.html" target="_blank">体验馆购买指导</a>
+			                <a href="article.php?id=10" target="_blank">注册新用户</a>
+                            <a href="article.php?id=11" target="_blank">订购家具流程</a>
+                            <a href="article.php?id=12" target="_blank">体验馆购买指导</a>
                
 			  
 			  </dd>
@@ -1600,9 +1598,9 @@ $('#expr_list .body').each(
 		          <td><dl class="dl">
               <dt class="dt">配送安装</dt>
               <dd class="dd"> 
-			                <a href="article-13.html" target="_blank">收货指南</a>
-                            <a href="article-14.html" target="_blank">体验馆服务费</a>
-                            <a href="article-15.html" target="_blank">物流配送</a>
+			                <a href="article.php?id=13" target="_blank">收货指南</a>
+                            <a href="article.php?id=14" target="_blank">体验馆服务费</a>
+                            <a href="article.php?id=15" target="_blank">物流配送</a>
                
 			  
 			  </dd>
@@ -1611,9 +1609,9 @@ $('#expr_list .body').each(
 		          <td><dl class="dl">
               <dt class="dt">售后服务</dt>
               <dd class="dd"> 
-			                <a href="article-16.html" target="_blank">45天无理由退换货</a>
-                            <a href="article-17.html" target="_blank">如何申请退款</a>
-                            <a href="article-18.html" target="_blank">维修补件说明</a>
+			                <a href="article.php?id=16" target="_blank">45天无理由退换货</a>
+                            <a href="article.php?id=17" target="_blank">如何申请退款</a>
+                            <a href="article.php?id=18" target="_blank">维修补件说明</a>
                
 			  
 			  </dd>
@@ -1622,9 +1620,9 @@ $('#expr_list .body').each(
 		          <td><dl class="dl">
               <dt class="dt">购物保障</dt>
               <dd class="dd"> 
-			                <a href="article-19.html" target="_blank">正品保证</a>
-                            <a href="article-20.html" target="_blank">注册协议</a>
-                            <a href="article-21.html" target="_blank">隐私保护</a>
+			                <a href="article.php?id=19" target="_blank">正品保证</a>
+                            <a href="article.php?id=20" target="_blank">注册协议</a>
+                            <a href="article.php?id=21" target="_blank">隐私保护</a>
                
 			  
 			  </dd>
@@ -1650,19 +1648,16 @@ $('#expr_list .body').each(
     <div class="iconMap Right"><a><img class="ic1" src="themes/meilele/images/blank.gif" width="149" height="30" alt="" /></a><a><img class="ic2" src="themes/meilele/images/blank.gif" width="149" height="30" alt="" /></a><a><img class="ic3" src="themes/meilele/images/blank.gif" width="149" height="30" alt="" /></a><a><img class="ic4" src="themes/meilele/images/blank.gif" width="149" height="30" alt="" /></a><a><img class="ic5" src="themes/meilele/images/blank.gif" width="149" height="30" alt="" /></a>
 	</div>
   </div>
-    <div id="JS_ship_link" class="w footer-link"><strong>友情链接：</strong>
-    <a href="http://suqiannet.taobao.com/" target="_blank" title="美乐乐淘宝店">美乐乐淘宝店</a>
-    <a href="http://www.7u7u7u.com.cn" target="_blank" title="美乐乐">美乐乐</a>
-    <a href="http://mll.7u7u7u.com.cn" target="_blank" title="美乐乐源码">美乐乐源码</a>
-    </div>
     <div class="w footer-copy"> 
     <a href="#"  >商家入驻</a> |     <a href="#"  >家居图片</a> |     <a href="#"  >家居资讯</a> |     <a href="#"  >品牌大全</a> |     <a href="#"  >装修图片 </a> |     <a href="#"  >装修材料</a> |     <a href="#"  >家私导购</a> |     <a href="#"  >品牌展厅</a> |     <a href="#"  >客服中心</a> |     <a href="#"  >网站地图 </a>    
   <br />
-    &copy; 2005-2015 美乐乐源码 版权所有，并保留所有权利。<br />
+    &copy; 2005-2015 YINOOS 依诺斯网上高档家具城 买家具去哪个网站好,网上买家具就去依诺斯 版权所有，并保留所有权利。<br />
 	 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5891729'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D5891729' type='text/javascript'%3E%3C/script%3E"));</script>
-        E-mail: 77882543@qq.com<br />
-              <a href="http://wpa.qq.com/msgrd?V=1&amp;uin=77882543&amp;Site=美乐乐源码&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:77882543:4" height="16" border="0" alt="QQ" /> 77882543</a>
-                              <a href="http://amos1.taobao.com/msg.ww?v=2&uid=zhao_324&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=zhao_324&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />zhao_324</a>
+       Tel: 010-12345678        E-mail: 333@qq.com<br />
+              <a href="http://wpa.qq.com/msgrd?V=1&amp;uin=21111&amp;Site=YINOOS 依诺斯网上高档家具城 买家具去哪个网站好,网上买家具就去依诺斯&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:21111:4" height="16" border="0" alt="QQ" /> 21111</a>
+                              <a href="http://amos1.taobao.com/msg.ww?v=2&uid=c333&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=c333&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />c333</a>
+                        <a href="http://amos1.taobao.com/msg.ww?v=2&uid=c444%3A%E5%94%AE%E5%89%8D&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=c444%3A%E5%94%AE%E5%89%8D&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />c444:售前</a>
+                        <a href="http://amos1.taobao.com/msg.ww?v=2&uid=c555%3A%E5%94%AE%E5%90%8E&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid=c555%3A%E5%94%AE%E5%90%8E&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />c555:售后</a>
                                                               <br />
       
 	</div>
