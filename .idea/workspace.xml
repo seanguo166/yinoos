@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="703f494e-495a-4b5d-afec-0b3f51baa72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/meilele/index.dwt" afterPath="$PROJECT_DIR$/themes/meilele/index.dwt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" afterPath="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yinoos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +57,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.dwt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.dwt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/meilele/index.dwt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6576728" vertical-offset="795" max-vertical-offset="12795">
+            <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="12795">
               <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_footer.lbi" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/meilele/library/page_footer.lbi">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.50373137" vertical-offset="0" max-vertical-offset="8670">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -100,6 +114,7 @@
         <option value="$PROJECT_DIR$/member/ajax_loginsta.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/themes/meilele/index.dwt" />
+        <option value="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" />
       </list>
     </option>
   </component>
@@ -170,6 +185,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="meilele" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yinoos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yinoos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meilele" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,8 +397,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/meilele/index.dwt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6576728" vertical-offset="795" max-vertical-offset="12795">
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="12795">
           <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/meilele/library/page_footer.lbi">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50373137" vertical-offset="0" max-vertical-offset="8670">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding />
         </state>
       </provider>
