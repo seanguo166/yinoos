@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="703f494e-495a-4b5d-afec-0b3f51baa72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" afterPath="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/lib.debug.php" afterPath="$PROJECT_DIR$/includes/lib.debug.php" />
     </list>
     <ignored path="yinoos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,15 +66,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_footer.lbi" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_footer.lbi" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/meilele/library/page_footer.lbi">
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1753731" vertical-offset="1725" max-vertical-offset="8265">
+            <state vertical-scroll-proportion="11.052631" vertical-offset="1725" max-vertical-offset="8265">
               <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.debug.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/lib.debug.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5867159" vertical-offset="2967" max-vertical-offset="8010">
+              <caret line="313" column="20" selection-start-line="313" selection-start-column="20" selection-end-line="313" selection-end-column="20" />
+              <folding>
+                <marker date="1446899803000" expanded="true" signature="7013:7025" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="10810:10827" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="13214:13240" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="13938:13964" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="14081:14107" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="15064:15113" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="15327:15948" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="16107:16741" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="17159:17685" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="17187:17354" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="17380:17546" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="17570:17665" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="17751:18270" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="17820:18249" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="17853:17994" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="21653:22358" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="21687:21879" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="21906:21963" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="21990:22338" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="22408:22551" placeholder="..." />
+                <marker date="1446899803000" expanded="true" signature="22436:22531" placeholder="{...}" />
+                <marker date="1446899803000" expanded="true" signature="22620:22748" placeholder="..." />
+                <marker date="1446899803000" expanded="false" signature="22653:22696" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,6 +148,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/themes/meilele/index.dwt" />
         <option value="$PROJECT_DIR$/themes/meilele/library/page_footer.lbi" />
+        <option value="$PROJECT_DIR$/includes/lib.debug.php" />
       </list>
     </option>
   </component>
@@ -180,47 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meilele" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yinoos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yinoos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meilele" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yinoos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yinoos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,9 +402,41 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1753731" vertical-offset="1725" max-vertical-offset="8265">
+        <state vertical-scroll-proportion="11.052631" vertical-offset="1725" max-vertical-offset="8265">
           <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/lib.debug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5867159" vertical-offset="2967" max-vertical-offset="8010">
+          <caret line="313" column="20" selection-start-line="313" selection-start-column="20" selection-end-line="313" selection-end-column="20" />
+          <folding>
+            <marker date="1446899803000" expanded="true" signature="7013:7025" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="10810:10827" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="13214:13240" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="13938:13964" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="14081:14107" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="15064:15113" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="15327:15948" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="16107:16741" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="17159:17685" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="17187:17354" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="17380:17546" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="17570:17665" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="17751:18270" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="17820:18249" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="17853:17994" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="21653:22358" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="21687:21879" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="21906:21963" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="21990:22338" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="22408:22551" placeholder="..." />
+            <marker date="1446899803000" expanded="true" signature="22436:22531" placeholder="{...}" />
+            <marker date="1446899803000" expanded="true" signature="22620:22748" placeholder="..." />
+            <marker date="1446899803000" expanded="false" signature="22653:22696" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
