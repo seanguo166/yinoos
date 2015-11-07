@@ -65,7 +65,7 @@
   <div class="visitTitle clearfix"> <span class="titleIcon"></span><span class="titleTxt">本馆位置</span> </div>
   <div class="exprSite clearfix">
     <div class="detList" style="width:500px; overflow:hidden">
-      <div class="map_img"><a><img src="{$supplier.position_img}"></a></div>
+      <div class="map_img"><a><img src="{$supplier.position_img}" width="520" ></a></div>
       
     </div>
     <div class="detList det_line" style="width:400px;">
