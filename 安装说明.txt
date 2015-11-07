@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+客服:themes/default/kefu_showone.lbi
+客服:themes/default/kefu_show.lbi
+打开客服方法:includes/lib_insert.php 最后面 378行: return "";  改为:  return $val;

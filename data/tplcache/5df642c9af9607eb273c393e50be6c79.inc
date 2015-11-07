@@ -1,1 +1,0 @@
-<li><a href="[field:arcurl/]" target="_blank"><img onload="loadImage(this,244,367);" src="[field:litpic/]" /></a></li>
