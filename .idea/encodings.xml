@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/data/backupdata/dede_archives_0_1c1863c16897a90b.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data/backupdata/dede_channeltype_0_9d8a07780f830c29.txt" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/data/backupdata/dede_plus_changyan_setting_0_d32cb58528972510.txt" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/index.php" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/member/ajax_loginsta.php" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/index.php" charset="UTF-8" />
   </component>
 </project>
