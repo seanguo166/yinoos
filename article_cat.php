@@ -3,7 +3,7 @@
 /**
  * ECSHOP 文章分类
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -31,14 +31,19 @@ clear_cache_files();
 /*------------------------------------------------------ */
 
 /* 获得指定的分类ID */
-if (!empty($_GET['id']))
+
+// safety_20150629 change_start
+
+if (!empty($_GET['id']) && preg_match('/^-?[1-9]\d*$/', $_REQUEST['id']))
 {
     $cat_id = intval($_GET['id']);
 }
-elseif (!empty($_GET['category']))
+elseif (!empty($_GET['category']) && preg_match('/^-?[1-9]\d*$/', $_REQUEST['category']))
 {
     $cat_id = intval($_GET['category']);
 }
+
+// safety_20150629 change_end
 else
 {
     ecs_header("Location: ./\n");
@@ -120,6 +125,14 @@ if (!$smarty->is_cached('article_cat.dwt', $cache_id))
 
         $goon_keywords = urlencode($_REQUEST['keywords']);
     }
+	
+	
+	/* 代码增加_start  By  www.68ecshop.com */
+	$search_url = "article_cat.php?id=$cat_id";
+	$smarty->assign('search_url',       $search_url);
+	/* 代码增加_end  By  www.68ecshop.com */
+
+	
     $smarty->assign('artciles_list',    get_cat_articles($cat_id, $page, $size ,$keywords));
     $smarty->assign('cat_id',    $cat_id);
     /* 分页 */
@@ -131,4 +144,7 @@ $smarty->assign('feed_url',         ($_CFG['rewrite'] == 1) ? "feed-typearticle_
 
 $smarty->display('article_cat.dwt', $cache_id);
 
+/* 代码增加_start  By  www.68ecshop.com */
+make_html();
+/* 代码增加_end   By  www.68ecshop.com */
 ?>

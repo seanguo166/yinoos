@@ -3,7 +3,7 @@
 /**
  * ECSHOP 夺宝奇兵前台页面
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -27,7 +27,13 @@ if (empty($_REQUEST['act']))
 }
 
 /* 设置活动的SESSION */
-if (empty($_REQUEST['id']))
+// safety_20150629 change_start
+
+if (!empty($_REQUEST['id']) && preg_match('/^-?[1-9]\d*$/', $_REQUEST['id']))
+{
+	$id = intval($_REQUEST['id']);
+}
+else
 {
     $id = get_last_snatch();
     if ($id)
@@ -42,10 +48,9 @@ if (empty($_REQUEST['id']))
         $id = 0;
     }
 }
-else
-{
-   $id = intval($_REQUEST['id']);
-}
+
+// safety_20150629 change_end
+
 
 /* 显示页面部分 */
 if ($_REQUEST['act'] == 'main')

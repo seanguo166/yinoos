@@ -19,10 +19,14 @@ if (!defined('IN_ECS'))
 }
 
 //商品管理权限
-    $purview['01_goods_list']        = array('goods_manage', 'remove_back');
-    $purview['02_goods_add']         = 'goods_manage';
-    $purview['03_category_list']     = array('cat_manage', 'cat_drop');   //分类添加、分类转移和删除
+	$purview['01_goods_list']        = array('goods_manage', 'remove_back');
+	/* 代码增加_start  By  supplier.68ecshop.com */
+    $purview['02_supplier_goods_list']        = array('goods_manage', 'remove_back');
+    $purview['03_goods_add']         = 'goods_manage';
+    $purview['04_category_list']     = array('cat_manage', 'cat_drop');   //分类添加、分类转移和删除
+	/* 代码增加_end  By  supplier.68ecshop.com */
     $purview['05_comment_manage']    = 'comment_priv';
+	$purview['05_order_comment']    = 'order_comment_priv';//代码增加 --订单评论
     $purview['06_goods_brand_list']  = 'brand_manage';
     $purview['08_goods_type']        = 'attr_manage';   //商品属性
     $purview['11_goods_trash']       = array('goods_manage', 'remove_back');
@@ -36,6 +40,10 @@ if (!defined('IN_ECS'))
     $purview['51_virtual_card_add']  = 'virualcard';
     $purview['52_virtual_card_change'] = 'virualcard';
     $purview['goods_auto']           = 'goods_auto';
+	$purview['scan_store']           = 'scan_store';
+    $purview['05_shaidan_manage'] = 'shaidan_manage';
+    $purview['05_question_manage']           = 'question_manage';
+    $purview['05_goods_tags']           = 'tag_manage';
 
 //促销管理权限
     $purview['02_snatch_list']       = 'snatch_manage';
@@ -49,7 +57,11 @@ if (!defined('IN_ECS'))
     $purview['13_wholesale']         = 'whole_sale';
     $purview['14_package_list']      = 'package_manage';
 //  $purview['02_snatch_list']       = 'gift_manage';  //赠品管理
+    $purview['04_back_order']        = 'back_view';	
     $purview['15_exchange_goods']    = 'exchange_goods';  //赠品管理
+    $purview['11_kuaidi_order']      = 'order_view';	
+    $purview['12_kuaidi_order2']     = 'order_view';
+    $purview['25_pre_sale_list']	 = 'pre_sale';  //预售管理
 
 //文章管理权限
     $purview['02_articlecat_list']   = 'article_cat';
@@ -59,12 +71,16 @@ if (!defined('IN_ECS'))
 
 //会员管理权限
     $purview['03_users_list']        = 'users_manage';
+
+	$purview['04_users_export']        = 'users_manage';  //代码增加  By   www.68ecshop.com
+
     $purview['04_users_add']         = 'users_manage';
     $purview['05_user_rank_list']    = 'user_rank';
     $purview['09_user_account']      = 'surplus_manage';
     $purview['06_list_integrate']    = 'integrate_users';
     $purview['08_unreply_msg']       = 'feedback_priv';
     $purview['10_user_account_manage'] = 'account_manage';
+    $purview['09_postman_list']        = 'users_manage';
 
 //权限管理
     $purview['admin_logs']           = array('logs_manage', 'logs_drop');
@@ -72,11 +88,12 @@ if (!defined('IN_ECS'))
     $purview['agency_list']          = 'agency_manage';
     $purview['suppliers_list']          = 'suppliers_manage'; // 供货商
     $purview['admin_role']             = 'role_manage';
+    $purview['customer']        	 = 'customer'; //在线聊天客服管理
 
 //商店设置权限
     $purview['01_shop_config']       = 'shop_config';
-    $purview['shop_authorized']       = 'shop_authorized';
-    $purview['shp_webcollect']            = 'webcollect_manage';
+    $purview['shop_authorized']      = 'shop_authorized';
+    $purview['shp_webcollect']       = 'webcollect_manage';
     $purview['02_payment_list']      = 'payment';
     $purview['03_shipping_list']     = array('ship_manage','shiparea_manage');
     $purview['04_mail_settings']     = 'shop_config';
@@ -91,6 +108,7 @@ if (!defined('IN_ECS'))
     $purview['flashplay']            = 'flash_manage';
     $purview['ucenter_setup']        = 'integrate_users';
     $purview['021_reg_fields']       = 'reg_fields';
+    $purview['website']       		 = 'website_login';
 
 //广告管理
     $purview['z_clicks_stats']       = 'ad_manage';
@@ -98,7 +116,10 @@ if (!defined('IN_ECS'))
     $purview['ad_list']              = 'ad_manage';
 
 //订单管理权限
-    $purview['02_order_list']        = 'order_view';
+/* 代码增加_start  By  supplier.68ecshop.com */
+    $purview['01_order_list']        = 'order_view';
+	$purview['02_supplier_order']        = 'order_view';
+	/* 代码增加_end  By  supplier.68ecshop.com */
     $purview['03_order_query']       = 'order_view';
     $purview['04_merge_order']       = 'order_os_edit';
     $purview['05_edit_order_print']  = 'order_os_edit';
@@ -106,9 +127,16 @@ if (!defined('IN_ECS'))
     $purview['08_add_order']         = 'order_edit';
     $purview['09_delivery_order']    = 'delivery_view';
     $purview['10_back_order']        = 'back_view';
+    $purview['11_supplier_back_order']        = 'back_view';
+    $purview['12_order_excel']        = 'order_view';
+    $purview['02_supplier_order']    = 'order_view';
+	$purview['12_invoice_list']    = 'invoice_manage';
 
 //报表统计权限
     $purview['flow_stats']           = 'client_flow_stats';
+	/* 代码添加_START   By www.68ecshop.com */
+	$purview['keyword']              = 'client_flow_stats';
+	/* 代码添加_SEND  By www.68ecshop.com */
     $purview['report_guest']         = 'client_flow_stats';
     $purview['report_users']         = 'client_flow_stats';
     $purview['visit_buy_per']        = 'client_flow_stats';
@@ -149,5 +177,27 @@ if (!defined('IN_ECS'))
     $purview['email_list']           = 'email_list';
     $purview['magazine_list']        = 'magazine_list';
     $purview['view_sendlist']        = 'view_sendlist';
+    $purview['sendmail']        	 = 'send_mail';
 
+/* 代码增加_start  By   supplier.68ecshop.com */
+$purview['05_supplier_rank']        = 'supplier_rank';
+$purview['01_supplier_reg']        = 'supplier_manage';
+$purview['02_supplier_list']        = 'supplier_manage';
+$purview['03_rebate_nopay']        = 'supplier_rebate';
+$purview['03_rebate_pay']        = 'supplier_rebate';
+$purview['04_shop_category']        = 'supplier_manage';
+$purview['05_shop_street']        = 'supplier_manage';
+$purview['06_supplier_tag']        = 'supplier_tag';
+/* 代码增加_end  By   supplier.68ecshop.com */
+
+	$purview['website']      = 'website';
+	/* 代码增加_start  By  www.68ecshop.com */
+	$purview['16_takegoods_list']			= 'takegoods_list';
+	$purview['16_takegoods_order']    = 'takegoods_order';
+	/* 代码增加_end  By  www.68ecshop.com */
+
+//自提点管理权限
+	$purview['pickup_point_list'] = 'pickup_point_manage';
+    $purview['pickup_point_add'] = 'pickup_point_manage';
+	$purview['pickup_point_batch_add'] = 'pickup_point_batch';
 ?>

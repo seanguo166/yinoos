@@ -277,8 +277,10 @@ class sms
             return false;
         }
         $phone_key=0;
-
-        $phones=explode(',',$phones);
+        if(!is_array($phones))
+        {
+            $phones=array($phones);
+        }
         foreach($phones as $key => $value)
         {
              if($i<200)

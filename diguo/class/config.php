@@ -8,9 +8,9 @@ if(!defined('InEmpireBak'))
 $phome_db_ver="5.0";
 $phome_db_server="localhost";
 $phome_db_port="";
-$phome_db_username="root";
-$phome_db_password="123456";
-$phome_db_dbname="";
+$phome_db_username="ecshop";
+$phome_db_password="2313298";
+$phome_db_dbname="ecshop";
 $baktbpre="";
 $phome_db_char="";
 

@@ -78,14 +78,17 @@ class alipay
      *
      * @return void
      */
-    function alipay()
-    {
-    }
 
+	/* 代码修改_start  By  www.68ecshop.com */
     function __construct()
     {
         $this->alipay();
     }
+
+	 function alipay()
+    {
+    }
+	/* 代码修改_end  By  www.68ecshop.com */
 
     /**
      * 生成支付代码
@@ -198,13 +201,11 @@ class alipay
         {
             return false;
         }
-
         /* 检查支付的金额是否相符 */
         if (!check_money($order_sn, $_GET['total_fee']))
         {
             return false;
         }
-
         if ($_GET['trade_status'] == 'WAIT_SELLER_SEND_GOODS')
         {
             /* 改变订单状态 */

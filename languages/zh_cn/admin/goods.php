@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心起始页语言文件
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -85,6 +85,10 @@ $_LANG['hot'] = '热销';
 $_LANG['not_hot'] = '取消热销';
 $_LANG['move_to'] = '转移到分类';
 
+$_LANG['pass_audit'] = '审核通过';
+$_LANG['not_audit'] = '未审核';
+$_LANG['not_pass_audit'] = '审核未通过';
+
 // ajax
 $_LANG['goods_name_null'] = '请输入商品名称';
 $_LANG['goods_sn_null'] = '请输入货号';
@@ -113,6 +117,7 @@ $_LANG['lab_shop_price'] = '本店售价：';
 $_LANG['lab_market_price'] = '市场售价：';
 $_LANG['lab_user_price'] = '会员价格：';
 $_LANG['lab_promote_price'] = '促销价：';
+$_LANG['lab_cost_price'] = '分成金额：';
 $_LANG['lab_promote_date'] = '促销日期：';
 $_LANG['lab_picture'] = '上传商品图片：';
 $_LANG['lab_thumb'] = '上传商品缩略图：';
@@ -148,7 +153,7 @@ $_LANG['notice_storage'] = '库存在商品为虚货或商品存在货品时为�
 $_LANG['notice_keywords'] = '用空格分隔';
 $_LANG['notice_user_price'] = '会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格';
 $_LANG['notice_goods_type'] = '请选择商品的所属类型，进而完善此商品的属性';
-
+$_LANG['notice_cost_price'] = '分成金额为客户购买本商品，其推荐人能够通过分成获得的金额基数';
 $_LANG['on_sale_desc'] = '打勾表示允许销售，否则不允许销售。';
 $_LANG['alone_sale'] = '打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。';
 $_LANG['free_shipping'] = '打勾表示此商品不会产生运费花销，否则按照正常运费计算。';

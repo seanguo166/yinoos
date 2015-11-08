@@ -3,7 +3,7 @@
 /**
  * ECSHOP 站外JS投放的统计程序
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -45,7 +45,6 @@ if ($_REQUEST['act'] == 'list' || $_REQUEST['act'] == 'download')
     while ($rows = $db->fetchRow($res))
     {
         /* 获取当前广告所产生的订单总数 */
-        $rows['referer']=addslashes($rows['referer']);
         $sql2 = 'SELECT COUNT(order_id) FROM ' .$ecs->table('order_info'). " WHERE from_ad='$rows[ad_id]' AND referer='$rows[referer]'";
         $rows['order_num'] = $db->getOne($sql2);
 
@@ -67,11 +66,9 @@ if ($_REQUEST['act'] == 'list' || $_REQUEST['act'] == 'download')
     while ($rows2 = $db->fetchRow($goods_res))
     {
         /* 获取当前广告所产生的订单总数 */
-        $rows2['referer']=addslashes($rows2['referer']);
         $rows2['order_num'] = $db->getOne("SELECT COUNT(order_id) FROM " .$ecs->table('order_info'). " WHERE referer='$rows2[referer]'");
 
         /* 当前广告所产生的已完成的有效订单 */
-
         $sql = "SELECT COUNT(order_id) FROM " .$ecs->table('order_info').
                " WHERE referer='$rows2[referer]'" . order_query_sql('finished');
         $rows2['order_confirm'] = $db->getOne($sql);

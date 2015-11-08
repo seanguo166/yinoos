@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心模版相关公用函数库
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -46,11 +46,20 @@ $template_files = array(
     'auction_list.dwt',
     'auction.dwt',
     'message_board.dwt',
+	'takegoods',   //代码增加   By  www.68ecshop.com
     'exchange_list.dwt',
 );
 
 /* 每个模板允许设置的库项目 */
 $page_libs = array(
+	/* 代码增加_start  By  www.68ecshop.com */
+   'takegoods' => array(
+        '/library/ur_here.lbi' => 0,
+        '/library/cart.lbi' => 0,
+        '/library/category_tree.lbi' => 0,
+        '/library/history.lbi' => 0,
+    ),
+	/* 代码增加_end  By  www.68ecshop.com */
     'article' => array(
         '/library/ur_here.lbi' => 0,
         '/library/search_form.lbi' => 0,

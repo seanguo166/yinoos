@@ -3,7 +3,7 @@
 /**
  * ECSHOP 配送方式管理程序
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -36,7 +36,7 @@ if ($_REQUEST['act'] == 'list')
         }
 
         /* 检查该插件是否已经安装 */
-        $sql = "SELECT shipping_id, shipping_name, shipping_desc, insure, support_cod,shipping_order FROM " .$ecs->table('shipping'). " WHERE shipping_code='" .$modules[$i]['code']. "' ORDER BY shipping_order";
+        $sql = "SELECT shipping_id, shipping_name, shipping_desc, insure, support_cod,shipping_order FROM " .$ecs->table('shipping'). " WHERE shipping_code='" .$modules[$i]['code']. "' and supplier_id=0 ORDER BY shipping_order";
         $row = $db->GetRow($sql);
 
         if ($row)
@@ -87,23 +87,25 @@ elseif ($_REQUEST['act'] == 'install')
     include_once(ROOT_PATH . 'includes/modules/shipping/' . $_GET['code'] . '.php');
 
     /* 检查该配送方式是否已经安装 */
-    $sql = "SELECT shipping_id FROM " .$ecs->table('shipping'). " WHERE shipping_code = '$_GET[code]'";
+	$sql = "SELECT shipping_id FROM " .$ecs->table('shipping'). " WHERE shipping_code = '$_GET[code]' and supplier_id=0";
     $id = $db->GetOne($sql);
 
     if ($id > 0)
     {
         /* 该配送方式已经安装过, 将该配送方式的状态设置为 enable */
-        $db->query("UPDATE " .$ecs->table('shipping'). " SET enabled = 1 WHERE shipping_code = '$_GET[code]' LIMIT 1");
+		$db->query("UPDATE " .$ecs->table('shipping'). " SET enabled = 1 WHERE shipping_code = '$_GET[code]' and supplier_id=0 LIMIT 1");
     }
     else
     {
         /* 该配送方式没有安装过, 将该配送方式的信息添加到数据库 */
         $insure = empty($modules[0]['insure']) ? 0 : $modules[0]['insure'];
+		$support_pickup =  isset($modules[0]['support_pickup']) && $modules[0]['support_pickup'] ? 1 : 0;
+		/* 代码修改_start   By www.ecshop68.com */
         $sql = "INSERT INTO " . $ecs->table('shipping') . " (" .
-                    "shipping_code, shipping_name, shipping_desc, insure, support_cod, enabled, print_bg, config_lable, print_model" .
+                    "shipping_code, shipping_name, shipping_desc, insure, support_cod, enabled, print_bg, config_lable, print_model , support_pickup" .
                 ") VALUES (" .
                     "'" . addslashes($modules[0]['code']). "', '" . addslashes($_LANG[$modules[0]['code']]) . "', '" .
-                    addslashes($_LANG[$modules[0]['desc']]) . "', '$insure', '" . intval($modules[0]['cod']) . "', 1, '" . addslashes($modules[0]['print_bg']) . "', '" . addslashes($modules[0]['config_lable']) . "', '" . $modules[0]['print_model'] . "')";
+                    addslashes($_LANG[$modules[0]['desc']]) . "', '$insure', '" . intval($modules[0]['cod']) . "', 1, '" . addslashes($modules[0]['print_bg']) . "', '" . addslashes($modules[0]['config_lable']) . "', '" . $modules[0]['print_model'] . "', $support_pickup)";
         $db->query($sql);
         $id = $db->insert_Id();
     }
@@ -128,7 +130,7 @@ elseif ($_REQUEST['act'] == 'uninstall')
     admin_priv('ship_manage');
 
     /* 获得该配送方式的ID */
-    $row = $db->GetRow("SELECT shipping_id, shipping_name, print_bg FROM " .$ecs->table('shipping'). " WHERE shipping_code='$_GET[code]'");
+	$row = $db->GetRow("SELECT shipping_id, shipping_name, print_bg FROM " .$ecs->table('shipping'). " WHERE shipping_code='$_GET[code]' and supplier_id=0");
     $shipping_id = $row['shipping_id'];
     $shipping_name = $row['shipping_name'];
 

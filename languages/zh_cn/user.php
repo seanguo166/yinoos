@@ -3,7 +3,7 @@
 /**
  * ECSHOP 用户中心语言项
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -85,6 +85,7 @@ $_LANG['account_js']['payment_empty'] = '请选择支付方式！';
 /* 缺货登记 */
 $_LANG['oos_booking'] = '缺货登记';
 $_LANG['booking_goods_name'] = '订购商品名';
+$_LANG['booking_store_name'] = '店铺信息';
 $_LANG['booking_amount'] = '订购数量';
 $_LANG['booking_time'] = '登记时间';
 $_LANG['process_desc'] = '处理备注';
@@ -115,7 +116,7 @@ $_LANG['rank_integral'] = '等级积分';
 $_LANG['consume_integral'] = '消费积分';
 $_LANG['account_balance'] = '账户余额';
 $_LANG['user_bonus'] = '用户红包';
-$_LANG['user_bonus_info'] = '共计 %d 个,价值 %s';
+$_LANG['user_bonus_info'] = ' %d ';
 $_LANG['not_bonus'] = '没有红包';
 $_LANG['add_user_bonus'] = '添加一个红包';
 $_LANG['bonus_number'] = '红包序列号';
@@ -286,6 +287,22 @@ $_LANG['business_message'] = '发送/查看商家留言';
 $_LANG['pay_order_by_surplus'] = '追加使用余额支付订单：%s';
 $_LANG['return_surplus_on_cancel'] = '取消订单 %s，退回支付订单时使用的预付款';
 $_LANG['return_integral_on_cancel'] = '取消订单 %s，退回支付订单时使用的积分';
+/* 代码增加_start  By  www.68ecshop.com */
+/* 退换货订单状态 */
+$_LANG['bos'][0] = "通过审核，等待用户寄回商品途中";
+$_LANG['bos'][1] = "收到用户寄回商品";
+$_LANG['bos'][2] = "换回商品已寄出";
+$_LANG['bos'][3] = "完成退货/维修";
+$_LANG['bos'][4] = "退款(无需退货)";
+$_LANG['bos'][5] = "申请审核中";
+$_LANG['bos'][6] = "申请被拒绝";
+$_LANG['bos'][7] = "寄回商品超期，申请被自动取消";
+$_LANG['bos'][8] = "用户自行取消申请";
+
+/* 退换货订单退款状态 */
+$_LANG['bps'][0] = "未退款";
+$_LANG['bps'][1] = "已退款";
+$_LANG['bps'][9] = "申请返修";
 
 /* 订单状态 */
 $_LANG['os'][OS_UNCONFIRMED] = '未确认';
@@ -331,6 +348,7 @@ $_LANG['notice_order_sn'] = '当两个订单不一致时，合并后的订单信
 $_LANG['subtotal'] = '小计';
 $_LANG['goods_price'] = '商品价格';
 $_LANG['goods_attr'] = '属性';
+$_LANG['goods_shouhou'] = '售后';
 $_LANG['use_balance'] = '使用余额';
 $_LANG['order_postscript'] = '订单附言';
 $_LANG['order_number'] = '订单号';
@@ -372,6 +390,7 @@ $_LANG['update_address'] = '更新收货人信息';
 $_LANG['virtual_card_info'] = '虚拟卡信息';
 
 /* 取回密码 */
+$_LANG['label_input_uname'] = '请输入您的用户名/邮箱/已验证的手机';
 $_LANG['back_home_lnk'] = '返回首页';
 $_LANG['get_password_lnk'] = '返回获取密码页面';
 $_LANG['get_password_by_question'] = '密码问题找回密码';
@@ -379,6 +398,7 @@ $_LANG['get_password_by_mail'] = '注册邮件找回密码';
 $_LANG['back_retry_answer'] = '返回重试';
 
 /* 登录 注册 */
+$_LANG['username_chana'] = '用户名不能有中文';
 $_LANG['label_username'] = '用户名';
 $_LANG['label_email'] = 'email';
 $_LANG['label_password'] = '密码';
@@ -392,6 +412,7 @@ $_LANG['other_home_phone'] = '家庭电话';
 $_LANG['other_mobile_phone'] = '手机';
 $_LANG['remember'] = '请保存我这次的登录信息。';
 
+$_LANG['msg_un_chine'] = '用户名不能有中文';
 $_LANG['msg_un_blank'] = '用户名不能为空';
 $_LANG['msg_un_length'] = '用户名最长不得超过7个汉字';
 $_LANG['msg_un_format'] = '用户名含有非法字符';
@@ -400,6 +421,11 @@ $_LANG['msg_can_rg'] = '可以注册';
 $_LANG['msg_email_blank'] = '邮件地址不能为空';
 $_LANG['msg_email_registered'] = '邮箱已存在,请重新输入';
 $_LANG['msg_email_format'] = '邮件地址不合法';
+
+$_LANG['invalid_email_code'] = '对不起，您输入的邮箱验证码不正确或已过期';
+$_LANG['invalid_mobile_phone_code'] = '对不起，您输入的短信验证码不正确或已过期';
+$_LANG['mobile_phone_changed'] = '系统检测到您发送短信验证码的手机号已经改变，请重新获取验证码';
+$_LANG['email_changed'] = '系统检测到您发送邮箱验证码的邮箱地址已经改变，请重新获取验证码';
 
 $_LANG['login_success'] = '登录成功';
 $_LANG['confirm_login'] = '确认登录';
@@ -422,17 +448,24 @@ $_LANG['confirm_register'] = '确认注册';
 
 $_LANG['agreement'] = "我已看过并接受《<a href=\"article.php?cat_id=-1\" style=\"color:blue\" target=\"_blank\">用户协议</a>》";
 
+$_LANG['register_type_invalid'] = '无效的注册类型';
 $_LANG['email_empty'] = 'email为空';
 $_LANG['email_invalid'] = '%s 不是合法的email地址';
 $_LANG['email_exist'] = '%s 已经存在';
 $_LANG['email_not_allow'] = 'Email %s 不允许注册';
+$_LANG['mobile_phone_empty'] = '手机号码为空';
+$_LANG['mobile_phone_invalid'] = '%s 不是合法的手机号码';
+$_LANG['mobile_phone_exist'] = '%s 已经存在';
+$_LANG['mobile_phone_not_allow'] = '手机号码 %s 不允许注册';
 $_LANG['register'] = '注册新用户名';
+/*代码增加2014-12-23 by www.68ecshop.com  _star */
 $_LANG['register_success'] = '用户名 %s 注册成功';
-
+/*代码增加2014-12-23 by www.68ecshop.com  _end */
 $_LANG['passwd_question'] = '密码提示问题';
 $_LANG['sel_question'] = '请选择密码提示问题';
 $_LANG['passwd_answer'] = '密码问题答案';
 $_LANG['passwd_balnk'] = '密码中不能包含空格';
+$_LANG['mobile_code_template'] = '【%s】验证码为%s（客服绝不会以任何理由索取此验证码，切勿告知他人），请在页面中输入以完成验证。';//短信验证码模版
 
 /* 用户中心默认页面 */
 $_LANG['welcome_to'] = '欢迎您回到';
@@ -472,14 +505,16 @@ $_LANG['rows_num_must_over_0'] = '排列显示条目数应该大于0';
 $_LANG['last_month_order'] = '您最近30天内提交了';
 $_LANG['order_unit'] = '个订单';
 $_LANG['please_received'] = '以下订单已发货，请注意查收';
-$_LANG['your_auction'] = '您竟拍到了<strong>%s</strong> ，现在去 <a href="auction.php?act=view&amp;id=%s"><span style="color:#06c;text-decoration:underline;">购买</span></a>';
-$_LANG['your_snatch'] = '您夺宝奇兵竟拍到了<strong>%s</strong> ，现在去 <a href="snatch.php?act=main&amp;id=%s"><span style="color:#06c;text-decoration:underline;">购买</span></a>';
+$_LANG['your_auction'] = '您竟拍到了<strong>%s</strong> ，现在去 <a href="auction.php?act=view&amp;id=%s"><span style="color:#F52648;text-decoration:underline;">购买</span></a>';
+$_LANG['your_snatch'] = '您夺宝奇兵竟拍到了<strong>%s</strong> ，现在去 <a href="snatch.php?act=main&amp;id=%s"><span style="color:#F52648;text-decoration:underline;">购买</span></a>';
 
 /* 我的标签 */
 $_LANG['no_tag'] = '暂时没有标签';
 $_LANG['confirm_drop_tag'] = '您确认要删除此标签吗？';
 
 /* user_passport.dwt js语言文件 */
+$_LANG['passport_js']['username_chana'] = '- 用户名不能有中文。';
+$_LANG['passport_js']['msg_uname_length'] = '- 用户名不能超过 20 个字符。';
 $_LANG['passport_js']['username_empty'] = '- 用户名不能为空。';
 $_LANG['passport_js']['username_shorter'] = '- 用户名长度不能少于 3 个字符。';
 $_LANG['passport_js']['username_invalid'] = '- 用户名只能是由字母数字以及下划线组成。';
@@ -494,17 +529,26 @@ $_LANG['passport_js']['qq_invalid'] = '- QQ号码不是一个有效的号码';
 $_LANG['passport_js']['home_phone_invalid'] = '- 家庭电话不是一个有效号码';
 $_LANG['passport_js']['office_phone_invalid'] = '- 办公电话不是一个有效号码';
 $_LANG['passport_js']['mobile_phone_invalid'] = '- 手机号码不是一个有效号码';
-$_LANG['passport_js']['msg_un_blank'] = '* 用户名不能为空';
-$_LANG['passport_js']['msg_un_length'] = '* 用户名最长不得超过7个汉字';
-$_LANG['passport_js']['msg_un_format'] = '* 用户名含有非法字符';
-$_LANG['passport_js']['msg_un_registered'] = '* 用户名已经存在,请重新输入';
+
+$_LANG['passport_js']['msg_un_blank'] = '- 用户名不能为空';
+$_LANG['passport_js']['msg_un_chine'] = '- 用户名不能为中文';
+$_LANG['passport_js']['msg_un_length'] = '- 用户名不得超过14个字符';
+$_LANG['passport_js']['msg_un_format'] = '- 用户名含有非法字符';
+$_LANG['passport_js']['msg_un_registered'] = '- 用户名已经存在,请重新输入';
 $_LANG['passport_js']['msg_can_rg'] = '* 可以注册';
-$_LANG['passport_js']['msg_email_blank'] = '* 邮件地址不能为空';
-$_LANG['passport_js']['msg_email_registered'] = '* 邮箱已存在,请重新输入';
-$_LANG['passport_js']['msg_email_format'] = '* 邮件地址不合法';
-$_LANG['passport_js']['msg_blank'] = '不能为空';
+$_LANG['passport_js']['msg_email_blank'] = '- 邮件地址不能为空';
+$_LANG['passport_js']['msg_email_registered'] = '- 邮箱已存在';
+$_LANG['passport_js']['msg_email_format'] = '- 邮件地址不合法';
+$_LANG['passport_js']['msg_mobile_phone_blank'] = '- 手机号码不能为空';
+$_LANG['passport_js']['msg_mobile_phone_registered'] = '- 手机号码已存在';
+$_LANG['passport_js']['msg_mobile_phone_format'] = '- 手机号码不是一个有效号码';
+$_LANG['passport_js']['msg_blank'] = '- 不能为空';
 $_LANG['passport_js']['no_select_question'] = '- 您没有完成密码提示问题的操作';
-$_LANG['passport_js']['passwd_balnk'] = '- 密码中不能包含空格';
+$_LANG['passport_js']['passwd_balnk'] = '* 密码中不能包含空格';
+$_LANG['passport_js']['msg_email_code_blank'] = '- 邮箱验证码不能为空';
+$_LANG['passport_js']['msg_mobile_phone_code_blank'] = '- 手机验证码不能为空';
+$_LANG['passport_js']['msg_captcha_blank'] = '- 验证码不能为空';
+$_LANG['passport_js']['msg_register_type_blank'] = '- 注册类型不能为空'; //登陆注册
 
 
 /* user_clips.dwt js 语言文件 */
@@ -682,5 +726,10 @@ $_LANG['passwd_questions']['favorite_food']   = '我最喜爱的食物？';
 $_LANG['passwd_questions']['interest']        = '我最大的爱好？';
 $_LANG['passwd_questions']['favorite_novel']  = '我最喜欢的小说？';
 $_LANG['passwd_questions']['favorite_equipe'] = '我最喜欢的运动队？';
+
+/* 预售 */
+$_LANG['notice_ps_order_amount'] = '（备注：团购如果有保证金，第一次只需支付保证金和相应的支付费用）';
+$_LANG['order_is_pre_sale'] = '[预售]';
+
 
 ?>

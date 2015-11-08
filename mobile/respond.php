@@ -3,14 +3,14 @@
 /**
  * ECSHOP 支付响应页面
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
- * 网站地址: http://www.ecshop.com；
+ * * 版权所有 2008-2015 秦皇岛商之翼网络科技有限公司，并保留所有权利。
+ * 网站地址: http://www.68ecshop.com;
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
- * $Author: liubo $
- * $Id: respond.php 17217 2011-01-19 06:29:08Z liubo $
+ * $Author: derek $
+ * $Id: respond.php 17217 2011-01-19 06:29:08Z derek $
  */
 
 define('IN_ECS', true);
@@ -19,7 +19,7 @@ require(dirname(__FILE__) . '/includes/init.php');
 require(ROOT_PATH . 'includes/lib_payment.php');
 require(ROOT_PATH . 'includes/lib_order.php');
 /* 支付方式代码 */
-$pay_code = !empty($_REQUEST['code']) ? trim($_REQUEST['code']) : '';
+$pay_code = !empty($_REQUEST['code']) ? trim($_REQUEST['code']) : 'weixin';
 
 //获取首信支付方式
 if (empty($pay_code) && !empty($_REQUEST['v_pmode']) && !empty($_REQUEST['v_pstring']))
@@ -54,14 +54,15 @@ else
     }
 
     /* 判断是否启用 */
-    $sql = "SELECT COUNT(*) FROM " . $ecs->table('payment') . " WHERE pay_code = '$pay_code' AND enabled = 1";
+    $sql = "SELECT COUNT(*) FROM " . $ecs->table('ecsmart_payment') . " WHERE pay_code = '$pay_code' AND enabled = 1";
     if ($db->getOne($sql) == 0)
     {
         $msg = $_LANG['pay_disabled'];
     }
     else
     {
-        $plugin_file = ROOT_PATH.'includes/modules/payment/' . $pay_code . '.php';
+        $plugin_file = 'includes/modules/payment/' . $pay_code . '.php';
+
         /* 检查插件文件是否存在，如果存在则验证支付是否成功，否则则返回失败信息 */
         if (file_exists($plugin_file))
         {
@@ -69,8 +70,7 @@ else
             include_once($plugin_file);
 
             $payment = new $pay_code();
-            $msg     = (@$payment->respond()) ? '成功' : '失败';
-			ecs_header("Location:user.php?act=order_list\n");
+            $msg     = (@$payment->respond()) ? $_LANG['pay_success'] : $_LANG['pay_fail'];
         }
         else
         {

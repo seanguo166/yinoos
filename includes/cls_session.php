@@ -113,7 +113,7 @@ class cls_session
         {
             $this->gen_session_id();
 
-            setcookie($this->session_name, $this->session_id . $this->gen_session_key($this->session_id), 0, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure);
+            setcookie($this->session_name, $this->session_id . $this->gen_session_key($this->session_id), time()+86400*7, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure); //代码修改 By  www.68ecshop.com  
         }
 
         register_shutdown_function(array(&$this, 'close_session'));
@@ -236,13 +236,15 @@ class cls_session
         if (mt_rand(0, 2) == 2)
         {
             $this->db->query('DELETE FROM ' . $this->session_data_table . ' WHERE expiry < ' . ($this->_time - $this->max_life_time));
+			$this->db->query('OPTIMIZE TABLE ' . $this->session_table);
         }
 
         if ((time() % 2) == 0)
         {
-            return $this->db->query('DELETE FROM ' . $this->session_table . ' WHERE expiry < ' . ($this->_time - $this->max_life_time));
+            $this->db->query('DELETE FROM ' . $this->session_table . ' WHERE expiry < ' . ($this->_time - $this->max_life_time));
+			return $this->db->query('OPTIMIZE TABLE ' . $this->session_table);
         }
-
+		
         return true;
     }
 
@@ -262,18 +264,22 @@ class cls_session
     {
         $GLOBALS['_SESSION'] = array();
 
-        setcookie($this->session_name, $this->session_id, 1, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure);
+		/* 注释掉下面这段代码或者直接删除_start   By  www.68ecshop.com */		
+        //setcookie($this->session_name, $this->session_id, 1, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure);
 
         /* ECSHOP 鑷?畾涔夋墽琛岄儴鍒 */
-        if (!empty($GLOBALS['ecs']))
-        {
-            $this->db->query('DELETE FROM ' . $GLOBALS['ecs']->table('cart') . " WHERE session_id = '$this->session_id'");
-        }
+        //if (!empty($GLOBALS['ecs']))
+        //{
+            //$this->db->query('DELETE FROM ' . $GLOBALS['ecs']->table('cart') . " WHERE session_id = '$this->session_id'");
+        //}
         /* ECSHOP 鑷?畾涔夋墽琛岄儴鍒 */
+		
+		/* 注释掉下面这段代码或者直接删除_end   By  www.68ecshop.com */
 
         $this->db->query('DELETE FROM ' . $this->session_data_table . " WHERE sesskey = '" . $this->session_id . "' LIMIT 1");
 
-        return $this->db->query('DELETE FROM ' . $this->session_table . " WHERE sesskey = '" . $this->session_id . "' LIMIT 1");
+		$this->db->query('DELETE FROM ' . $this->session_table . " WHERE sesskey = '" . $this->session_id . "' LIMIT 1");
+        return $this->db->query('OPTIMIZE TABLE ' . $this->session_table);
     }
 
     function get_session_id()

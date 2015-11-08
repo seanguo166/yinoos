@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心模版管理程序
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -184,7 +184,7 @@ if ($_REQUEST['act'] == 'setup')
             /* 分类下的商品 */
             if (isset($db_dyna_libs[$val['region']][$val['library']]) && ($row = array_shift($db_dyna_libs[$val['region']][$val['library']])))
             {
-                $cate_goods[] = array('region' => $val['region'], 'sort_order' => $val['sort_order'], 'number' => $row['number'], 'cats'=>cat_list(0, $row['id']));
+                $cate_goods[] = array('region' => $val['region'], 'sort_order' => $val['sort_order'], 'number' => $row['number'], 'cat_id' => $row['id'], 'cats'=>cat_list(0, $row['id']));
             }
             else
             {
@@ -574,10 +574,9 @@ if ($_REQUEST['act'] == 'install')
 
 if ($_REQUEST['act'] == 'backup')
 {
-    check_authz_json('backup_setting');
     include_once('includes/cls_phpzip.php');
-    $tpl= $_CFG['template'];
-    //$tpl = trim($_REQUEST['tpl_name']);
+
+    $tpl = trim($_REQUEST['tpl_name']);
 
     $filename = '../temp/backup/' . $tpl . '_' . date('Ymd') . '.zip';
 
@@ -637,7 +636,6 @@ if ($_REQUEST['act'] == 'update_library')
 /*------------------------------------------------------ */
 if ($_REQUEST['act'] == 'restore_library')
 {
-    admin_priv('backup_setting');
     $lib_name   = trim($_GET['lib']);
     $lib_file   = '../themes/' . $_CFG['template'] . '/library/' . $lib_name . '.lbi';
     $lib_file   = str_replace("0xa", '', $lib_file); // 过滤 0xa 非法字符

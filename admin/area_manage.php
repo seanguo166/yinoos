@@ -3,7 +3,7 @@
 /**
  * ECSHOP 地区列表管理文件
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -136,72 +136,6 @@ elseif ($_REQUEST['act'] == 'add_area')
 /*------------------------------------------------------ */
 //-- 编辑区域名称
 /*------------------------------------------------------ */
-
-elseif ($_REQUEST['act'] == 'edit_area')
-{
-    check_authz_json('area_manage');
-
-    $id = intval($_REQUEST['id']);
-    
-	$regions = array();
-    $sql = "SELECT * FROM " . $ecs->table('region') . " WHERE region_id = '$id'";
-    $regions = $db->getRow($sql);
-    if (count($regions) <= 0)
-    {
-        sys_msg('regions does not exist');
-    }
-	
-	$smarty->assign('regions', $regions);
-
-    assign_query_info();
-
-    $smarty->display('area_info.htm');
-}
-
-elseif ($_REQUEST['act'] == 'update_area')
-{
-    check_authz_json('area_manage');
-
-    /* 提交值 */
-        $regions = array('id'   => trim($_POST['region_id']));
-
-        $regions['new'] = array('region_name'   => trim($_POST['region_name']),
-							'pin_yin'   => trim($_POST['pin_yin']),
-							'is_top'   => trim($_POST['is_top']),
-							'is_show'   => trim($_POST['is_show'])
-                           );
-						   
-				   
-        $sql = "SELECT * FROM " . $ecs->table('region') . " WHERE region_id = '" . $regions['id'] . "'";
-        $regions['old'] = $db->getRow($sql);
-        if (empty($regions['old']['region_id']))
-        {
-            sys_msg('regions does not exist');
-        }
-		
-		    /* 查看区域是否重复 */
-		$parent_id = $exc->get_name($regions['id'], 'parent_id');
-		if (!$exc->is_only('region_name', $region_name, $id, "parent_id = '$parent_id'"))
-		{
-			sys_msg($_LANG['region_name_exist']);
-		}
-
-				
-
-        /* 保存供货商信息 */
-        $db->autoExecute($ecs->table('region'), $regions['new'], 'UPDATE', "region_id = '" . $regions['id'] . "'");
-
-
-        /* 记日志 */
-        admin_log($regions['old']['region_name'], 'edit', 'regions');
-
-        /* 清除缓存 */
-        clear_cache_files();
-
-        /* 提示信息 */
-        $links[] = array('href' => 'area_manage.php?act=list', '近回地区列表');
-        sys_msg('编辑地区成功！', 0, $links);
-}
 
 elseif ($_REQUEST['act'] == 'edit_area_name')
 {

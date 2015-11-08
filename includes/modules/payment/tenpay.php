@@ -3,7 +3,7 @@
 /**
  * ECSHOP 财付通插件
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -76,13 +76,14 @@ class tenpay
      *
      * @return void
      */
-    function tenpay()
-    {
-    }
+    
 
     function __construct()
     {
         $this->tenpay();
+    }
+	function tenpay()
+    {
     }
 
     /**
@@ -172,7 +173,7 @@ class tenpay
             $button  .= "<input type='hidden' name='$key' value='$val' />";
         }
 
-        $button  .= '<input type="image" src="'. $GLOBALS['ecs']->url() .'images/tenpay.gif" value="' .$GLOBALS['_LANG']['pay_button']. '" /></form><br />';
+        $button  .= '<input type="button"  value="' .$GLOBALS['_LANG']['pay_button']. '" /></form><br />';
 
         return $button;
     }

@@ -3,7 +3,7 @@
 /**
  * ECSHOP 红包类型/红包管理程序
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -44,6 +44,11 @@ $_LANG['send_by'][SEND_BY_USER] = '按用户发放';
 $_LANG['send_by'][SEND_BY_GOODS] = '按商品发放';
 $_LANG['send_by'][SEND_BY_ORDER] = '按订单金额发放';
 $_LANG['send_by'][SEND_BY_PRINT] = '线下发放的红包';
+$_LANG['send_by'][SEND_BY_REGISTER] = '按注册用户发放';  //代码增加   By  www.68ecshop.com
+$_LANG['send_by'][SEND_BY_ONLINE] = '线上发放的红包';
+$_LANG['bonus_img'] = '线上发放的红包图片';
+$_LANG['user_bonus_max'] = '用户领取线上红包上限';
+
 $_LANG['report_form'] = '报表';
 $_LANG['send'] = '发放';
 $_LANG['bonus_excel_file'] = '线下红包信息列表';
@@ -89,7 +94,10 @@ $_LANG['js_languages']['user_name_empty'] = '您至少需要选择一个会员!'
 $_LANG['js_languages']['invalid_min_amount'] = '请输入订单下限（大于0的数字）';
 $_LANG['js_languages']['send_start_lt_end'] = '红包发放开始日期不能大于结束日期';
 $_LANG['js_languages']['use_start_lt_end'] = '红包使用开始日期不能大于结束日期';
-
+//代码增加--cb--线上红包--68ecshop
+$_LANG['bonus_type4_notic'] = '图片最佳大小1210px*100px';
+$_LANG['bonus_type4_max_notic'] = '本设置仅对线上红包有效，为用户可领取的线上红包的数量。';
+//代码增加--cb--线上红包--68ecshop
 $_LANG['order_money_notic'] = '只要订单金额达到该数值，就会发放红包给用户';
 $_LANG['type_money_notic'] = '此类型的红包可以抵销的金额';
 $_LANG['send_startdate_notic'] = '只有当前时间介于起始日期和截止日期之间时，此类型的红包才可以发放';

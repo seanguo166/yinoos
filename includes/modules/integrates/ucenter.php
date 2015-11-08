@@ -3,7 +3,7 @@
 /**
  * UCenter 会员数据处理类
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com
  * ----------------------------------------------------------------------------
  * 这是一个免费开源的软件；这意味着您可以在不用于商业目的的前提下对程序代码
@@ -83,6 +83,8 @@ class ucenter extends integrate
         $this->field_gender = 'sex';
         $this->field_bday = 'birthday';
         $this->field_reg_date = 'reg_time';
+        $this->field_email_validated = 'is_validated';
+        $this->field_mobile_validated = 'validated';
         $this->need_sync = false;
         $this->is_ecshop = 1;
 
@@ -124,11 +126,11 @@ class ucenter extends integrate
      *
      * @return void
      */
-    function login($username, $password)
+    function login($username, $password, $rember=0)
     {
+	
         list($uid, $uname, $pwd, $email, $repeat) = uc_call("uc_user_login", array($username, $password));
         $uname = addslashes($uname);
-
         if($uid > 0)
         {
             //检查用户是否存在,不存在直接放入用户表
@@ -137,7 +139,7 @@ class ucenter extends integrate
             if(empty($result['ec_salt']))
             {
                 $user_exist = $this->db->getOne("SELECT user_id FROM " . $GLOBALS['ecs']->table("users") . " WHERE user_name='$username' AND password = '" . MD5($password) ."'");
-                if(!empty($user_exist))
+				if(!empty($user_exist))
                 {
                     $ec_salt=rand(1,9999);
                     $this->db->query('UPDATE ' . $GLOBALS['ecs']->table("users") . "SET `password`='".MD5(MD5($password). $ec_salt)."',`ec_salt`='". $ec_salt."' WHERE user_id = '" . $uid . "'");
@@ -318,13 +320,18 @@ class ucenter extends integrate
         $real_username = $cfg['username'];
         $cfg['username'] = addslashes($cfg['username']);
         $set_str = '';
-        $valarr =array('email'=>'email', 'gender'=>'sex', 'bday'=>'birthday');
+        $valarr =array('email'=>'email', 'gender'=>'sex', 'bday'=>'birthday' , 'password'=>'password');
         foreach ($cfg as $key => $val)
         {
-            if ($key == 'username' || $key == 'password' || $key == 'old_password')
+            //if ($key == 'username' || $key == 'password' || $key == 'old_password')
+			if ($key == 'username' || $key == 'old_password')
             {
                 continue;
             }
+			if($key == 'password'){
+				$val = md5($val);
+			}
+			
             $set_str .= $valarr[$key] . '=' . "'$val',";
         }
         $set_str = substr($set_str, 0, -1);

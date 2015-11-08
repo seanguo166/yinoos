@@ -3,7 +3,7 @@
 /**
  * ECSHOP 数据库导出类
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -28,7 +28,10 @@ if (!defined('IN_ECS'))
  */
 function dump_escape_string($str)
 {
-    return cls_mysql::escape_string($str);
+	/* 代码修改_start  By  www.68ecshop.com */
+    //return cls_mysql::escape_string($str);
+	return $GLOBALS['db']->escape_string($str);
+	/* 代码修改_star  By  www.68ecshop.com */
 }
 
 /**
@@ -61,7 +64,22 @@ class cls_sql_dump
 
     var $db;
 
+    
+	/* 代码修改_start   By  www.68ecshop.com */
     /**
+     *  类的构造函数
+     *
+     * @access  public
+     * @param
+     *
+     * @return void
+     */
+    function __construct(&$db, $max_size =0)
+    {
+        $this->cls_sql_dump($db, $max_size);
+    }
+
+	/**
      *  类的构造函数
      *
      * @access  public
@@ -79,18 +97,7 @@ class cls_sql_dump
 
     }
 
-    /**
-     *  类的构造函数
-     *
-     * @access  public
-     * @param
-     *
-     * @return void
-     */
-    function __construct(&$db, $max_size =0)
-    {
-        $this->cls_sql_dump($db, $max_size);
-    }
+	/* 代码修改_end   By  www.68ecshop.com */
 
     /**
      *  获取指定表的定义
@@ -350,7 +357,7 @@ class cls_sql_dump
      *
      * @return  array       $arr        信息数组
      */
-    function get_head($path)
+    public static function get_head($path)  //代码修改   By    www.68ecshop.com   增加 public static
     {
         /* 获取sql文件头部信息 */
         $sql_info = array('date'=>'', 'mysql_ver'=> '', 'php_ver'=>0, 'ecs_ver'=>'', 'vol'=>0);
@@ -475,7 +482,7 @@ class cls_sql_dump
      *
      * @return      string      $str    随机名称
      */
-    function get_random_name()
+    public static function get_random_name()  //代码修改   By    www.68ecshop.com
     {
         $str = date('Ymd');
 

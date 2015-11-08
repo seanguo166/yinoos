@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心公用函数库
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -302,48 +302,36 @@ function get_position_list()
 
     return $position_list;
 }
-
+/* 修改 by www.68ecshop.com 百度编辑器 begin */
 /**
  * 生成编辑器
  * @param   string  input_name  输入框名称
  * @param   string  input_value 输入框值
  */
-//888 
-/*function create_html_editor($input_name, $input_value = '')
-{
-    global $smarty;
-
-    $editor = new FCKeditor($input_name);
-    $editor->BasePath   = '../includes/fckeditor/';
-    $editor->ToolbarSet = 'Normal';
-    $editor->Width      = '100%';
-    $editor->Height     = '320';
-    $editor->Value      = $input_value;
-    $FCKeditor = $editor->CreateHtml();
-    $smarty->assign('FCKeditor', $FCKeditor);
-}
-*/
 function create_html_editor($input_name, $input_value = '')
 {
     global $smarty;
-    $kindeditor="<script charset='utf-8' src='../includes/kindeditor/kindeditor-min.js'></script>
-    <script>
-        var editor;
-            KindEditor.ready(function(K) {
-                editor = K.create('textarea[name=\"$input_name\"]', {
-                    allowFileManager : true,
-                    width : '700px',
-                    height: '300px',
-                    resizeType: 0    //固定宽高
-                });
-            });
-    </script>
-    <textarea id=\"$input_name\" name=\"$input_name\" style='width:700px;height:300px;'>$input_value</textarea>
-	<input type=\"submit\" value=\"提交\" />
-    ";
-    $smarty->assign('FCKeditor', $kindeditor);  //这里前面的 FCKEditor 不要变
-}
+    $HTML='
+    <script type="text/javascript" charset="utf-8" 
 
+src="../includes/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" 
+
+src="../includes/ueditor/ueditor.all.js"></script>
+    <textarea name="'.$input_name.'" id="'.$input_name.'" style="width:100%;">'.
+
+$input_value.'</textarea>
+    <script type="text/javascript">
+    UE.getEditor("'.$input_name.'",{
+    theme:"default", //皮肤
+    lang:"zh-cn",    //语言
+    initialFrameWidth:1000,  //初始化编辑器宽度,默认650
+    initialFrameHeight:350  //初始化编辑器高度,默认180
+    });
+    </script>';
+    $smarty->assign('FCKeditor', $HTML);
+}
+/* 修改 by www.68ecshop.com 百度编辑器 end */
 /**
  * 取得商品列表：用于把商品添加到组合、关联类、赠品类
  * @param   object  $filters    过滤条件
@@ -408,7 +396,7 @@ function get_where_sql($filter)
     $time = date('Y-m-d');
 
     $where  = isset($filter->is_delete) && $filter->is_delete == '1' ?
-        ' WHERE is_delete = 1 ' : ' WHERE is_delete = 0 ';
+        ' WHERE supplier_id=0 AND is_delete = 1 ' : ' WHERE supplier_id=0 AND is_delete = 0 ';
     $where .= (isset($filter->real_goods) && ($filter->real_goods > -1)) ? ' AND is_real = ' . intval($filter->real_goods) : '';
     $where .= isset($filter->cat_id) && $filter->cat_id > 0 ? ' AND ' . get_children($filter->cat_id) : '';
     $where .= isset($filter->brand_id) && $filter->brand_id > 0 ? " AND brand_id = '" . $filter->brand_id . "'" : '';
@@ -423,7 +411,9 @@ function get_where_sql($filter)
     $where .= isset($filter->in_ids) ? ' AND goods_id ' . db_create_in($filter->in_ids) : '';
     $where .= isset($filter->exclude) ? ' AND goods_id NOT ' . db_create_in($filter->exclude) : '';
     $where .= isset($filter->stock_warning) ? ' AND goods_number <= warn_number' : '';
-
+	$where .= isset($filter->is_on_sale) ? ' AND is_on_sale = 1 ' : '';
+	//是否为虚拟商品
+	$where .= isset($filter->is_virtual) ? ' AND is_virtual = '.$filter->is_virtual.' ' : '';
     return $where;
 }
 

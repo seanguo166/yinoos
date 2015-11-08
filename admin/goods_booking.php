@@ -3,7 +3,7 @@
 /**
  * ECSHOP 缺货处理管理程序
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -17,6 +17,7 @@ define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
 admin_priv('booking');
+$notice_status=array('0'=>'未通知', '1'=>'邮件通知（成功）', '2'=>'短信、邮件通知（成功）', '3'=>'短信通知（失败）');
 /*------------------------------------------------------ */
 //-- 列出所有订购信息
 /*------------------------------------------------------ */
@@ -31,6 +32,8 @@ if ($_REQUEST['act']=='list_all')
     $smarty->assign('filter',       $list['filter']);
     $smarty->assign('record_count', $list['record_count']);
     $smarty->assign('page_count',   $list['page_count']);
+
+	$smarty->assign('notice_status',    $notice_status);
 
     $sort_flag  = sort_flag($list['filter']);
     $smarty->assign($sort_flag['tag'], $sort_flag['img']);
@@ -83,6 +86,7 @@ if ($_REQUEST['act']=='detail')
 {
     $id = intval($_REQUEST['id']);
 
+	$smarty->assign('notice_status',    $notice_status);
     $smarty->assign('send_fail',    !empty($_REQUEST['send_ok']));
     $smarty->assign('booking',      get_booking_info($id));
     $smarty->assign('ur_here',      $_LANG['detail']);
@@ -100,8 +104,10 @@ if ($_REQUEST['act'] =='update')
 
     $dispose_note = !empty($_POST['dispose_note']) ? trim($_POST['dispose_note']) : '';
 
-    $sql = "UPDATE  ".$ecs->table('booking_goods').
-            " SET is_dispose='1', dispose_note='$dispose_note', ".
+	$status =!empty($_POST['status']) ? trim($_POST['status']) : '';
+
+	$sql = "UPDATE  ".$ecs->table('booking_goods').
+            " SET is_dispose='$status', dispose_note='$dispose_note', ".
                     "dispose_time='" .gmtime(). "', dispose_user='".$_SESSION['admin_name']."'".
             " WHERE rec_id='$_REQUEST[rec_id]'";
     $db->query($sql);

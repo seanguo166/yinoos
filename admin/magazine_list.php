@@ -3,7 +3,7 @@
 /**
  * ECSHOP 程序说明
  * ===========================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -58,7 +58,9 @@ elseif ($_REQUEST['act'] == 'add')
 {
     if (empty($_POST['step']))
     {
-        include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+        /* 修改 by www.68ecshop.com 百度编辑器 begin */
+        //include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+        /* 修改 by www.68ecshop.com 百度编辑器 end */
         $smarty->assign('action_link', array('text' => $_LANG['go_list'], 'href' => 'magazine_list.php?act=list'));
         $smarty->assign(array('ur_here'=>$_LANG['magazine_list'],'act'=>'add'));
         create_html_editor('magazine_content');
@@ -80,7 +82,9 @@ elseif ($_REQUEST['act'] == 'add')
 }
 elseif ($_REQUEST['act'] == 'edit')
 {
-    include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+    /* 修改 by www.68ecshop.com 百度编辑器 begin */
+    //include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+    /* 修改 by www.68ecshop.com 百度编辑器 end */
     $id = intval($_REQUEST['id']);
     if (empty($_POST['step']))
     {
@@ -88,7 +92,7 @@ elseif ($_REQUEST['act'] == 'edit')
         $smarty->assign(array('id'=>$id,'act'=>'edit','magazine_name'=>$rt['template_subject'],'magazine_content'=>$rt['template_content']));
         $smarty->assign(array('ur_here'=>$_LANG['magazine_list'],'act'=>'edit'));
         $smarty->assign('action_link', array('text' => $_LANG['go_list'], 'href' => 'magazine_list.php?act=list'));
-        create_html_editor('magazine_content', $rt['template_content']);
+         create_html_editor('magazine_content', htmlspecialchars($rt['template_content'])); /* 修改 by www.68ecshop.com 百度编辑器 */
         assign_query_info();
         $smarty->display('magazine_list_add.htm');
     }

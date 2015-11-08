@@ -3,7 +3,7 @@
 /**
  * ECSHOP 购物流程相关语言
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -54,7 +54,7 @@ $_LANG['storage_short'] = '库存不足';
 $_LANG['subtotal'] = '小计';
 $_LANG['accessories'] = '配件';
 $_LANG['largess'] = '赠品';
-$_LANG['shopping_money'] = '购物金额小计 %s';
+$_LANG['shopping_money'] = '应付总额：<span> %s</span>';
 $_LANG['than_market_price'] = '比市场价 %s 节省了 %s (%s)';
 $_LANG['your_discount'] = '根据优惠活动<a href="activity.php"><font color=red>%s</font></a>，您可以享受折扣 %s';
 $_LANG['no'] = '无';
@@ -112,6 +112,7 @@ $_LANG['flow_js']['payment_not_null'] = '请您选择支付方式！';
 $_LANG['flow_js']['goodsattr_style'] = 1;
 $_LANG['flow_js']['tele_invaild'] = '电话号码不有效的号码';
 $_LANG['flow_js']['zip_not_num'] = '邮政编码只能填写数字';
+$_LANG['flow_js']['mobile_not_null'] = '手机号码不能为空!';
 $_LANG['flow_js']['mobile_invaild'] = '手机号码不是合法号码';
 
 $_LANG['new_consignee_address'] = '新收货地址';
@@ -168,8 +169,19 @@ $_LANG['bonus_sn_error'] = '该红包序列号不正确';
 $_LANG['bonus_min_amount_error'] = '订单商品金额没有达到使用该红包的最低金额 %s';
 $_LANG['bonus_is_ok'] = '该红包序列号可以使用，可以抵扣 %s';
 
-
+/* 代码增加_start   By www.ecshop68.com */
+$_LANG['pickup_point_list'] = '自提点列表';
+$_LANG['shop_name'] = '店名';
+$_LANG['address'] = '地址';
+$_LANG['contact'] = '联系人';
+$_LANG['phone'] = '联系方式';
+$_LANG['empty_pickup_point'] = '该地区暂无自提点';
+/* 代码增加_end   By www.ecshop68.com */
 $_LANG['shopping_myship'] = '我的配送';
 $_LANG['shopping_activity'] = '活动列表';
 $_LANG['shopping_package'] = '超值礼包列表';
+/*增值税发票_添加_START_www.68ecshop.com*/
+$_LANG['normal_invoice'] = '普通发票';
+$_LANG['vat_invoice'] = '增值税发票';
+/*增值税发票_添加_END_www.68ecshop.com*/
 ?>

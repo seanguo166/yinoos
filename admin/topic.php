@@ -3,7 +3,7 @@
 /**
  * ECSHOP 专题管理
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -72,7 +72,10 @@ if ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
     $smarty->assign('isadd', $isadd);
     $topic_id  = empty($_REQUEST['topic_id']) ? 0 : intval($_REQUEST['topic_id']);
 
-    include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+     /* 修改 by www.68ecshop.com 百度编辑器 begin */
+    //include_once(ROOT_PATH.'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
+    /* 修改 by www.68ecshop.com 百度编辑器 end */
+
 
     $smarty->assign('ur_here',     $_LANG['09_topic']);
     $smarty->assign('action_link', list_link($isadd));
@@ -99,7 +102,7 @@ if ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
         $topic['start_time'] = local_date('Y-m-d', $topic['start_time']);
         $topic['end_time']   = local_date('Y-m-d', $topic['end_time']);
 
-        create_html_editor('topic_intro', $topic['intro']);
+        create_html_editor('topic_intro', htmlspecialchars($topic['intro'])); /* 修改 by www.68ecshop.com 百度编辑器 */
 
         require(ROOT_PATH . 'includes/cls_json.php');
 
@@ -268,6 +271,13 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
     $db->query($sql);
 
     clear_cache_files();
+
+	/* 代码增加_start  By  www.68ecshop.com */
+	if (!$is_insert)
+	{
+		clearhtml_file('topic', 0, $topic_id);
+	}
+	/* 代码增加_end  By  www.68ecshop.com */
 
     $links[] = array('href' => 'topic.php', 'text' =>  $_LANG['back_list']);
     sys_msg($_LANG['succed'], 0, $links);

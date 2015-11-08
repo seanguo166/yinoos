@@ -240,13 +240,15 @@ else
     $cmt->id   = !empty($_GET['id'])   ? intval($_GET['id'])   : 0;
     $cmt->type = !empty($_GET['type']) ? intval($_GET['type']) : 0;
     $cmt->page = isset($_GET['page'])   && intval($_GET['page'])  > 0 ? intval($_GET['page'])  : 1;
+	$cmt->comment_level = !empty($_GET['comment_level']) ? intval($_GET['comment_level'])  : 0;  //代码增加  By www.ecshophome.com
 }
 
 if ($result['error'] == 0)
 {
-    $comments = assign_comment($cmt->id, $cmt->type, $cmt->page);
+    $comments = assign_comment($cmt->id, $cmt->type, $cmt->page, $cmt->comment_level);  //代码修改 增加一个 $cmt->comment_level   By www.ecshophome.com
 
     $smarty->assign('comment_type', $cmt->type);
+	$smarty->assign('comment_level',    $cmt->comment_level);  //代码增加  By www.ecshophome.com
     $smarty->assign('id',           $cmt->id);
     $smarty->assign('username',     $_SESSION['user_name']);
     $smarty->assign('email',        $_SESSION['email']);
@@ -261,7 +263,6 @@ if ($result['error'] == 0)
     }
 
     $result['message'] = $_CFG['comment_check'] ? $_LANG['cmt_submit_wait'] : $_LANG['cmt_submit_done'];
-
     $result['content'] = $smarty->fetch("library/comments_list.lbi");
 }
 
@@ -285,7 +286,7 @@ function add_comment($cmt)
 
     $user_id = empty($_SESSION['user_id']) ? 0 : $_SESSION['user_id'];
     $email = empty($cmt->email) ? $_SESSION['email'] : trim($cmt->email);
-    $user_name = empty($cmt->username) ? $_SESSION['user_name'] : '';
+    $user_name = empty($cmt->username) ? $_SESSION['user_name'] : trim($cmt->username);
     $email = htmlspecialchars($email);
     $user_name = htmlspecialchars($user_name);
 

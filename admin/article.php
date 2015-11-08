@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心文章处理程序文件
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -16,7 +16,9 @@
 define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
-require_once(ROOT_PATH . "includes/fckeditor/fckeditor.php");
+/* 修改 by www.68ecshop.com 百度编辑器 begin */
+//require_once(ROOT_PATH . "includes/fckeditor/fckeditor.php");
+/* 修改 by www.68ecshop.com 百度编辑器 end */
 require_once(ROOT_PATH . 'includes/cls_image.php');
 
 /*初始化数据交换对象 */
@@ -204,7 +206,8 @@ if ($_REQUEST['act'] == 'edit')
     $article = $db->GetRow($sql);
 
     /* 创建 html editor */
-    create_html_editor('FCKeditor1',$article['content']);
+   create_html_editor('FCKeditor1',htmlspecialchars($article['content'])); /* 修改 by www.68ecshop.com 百度编辑器 */
+
 
     /* 取得分类、品牌 */
     $smarty->assign('goods_cat_list', cat_list());
@@ -293,7 +296,11 @@ if ($_REQUEST['act'] =='update')
         admin_log($_POST['title'], 'edit', 'article');
 
         clear_cache_files();
-
+		
+		/* 代码增加_start  By  www.68ecshop.com */
+	    clearhtml_file('article', $_POST['article_cat'], $_POST['id']);		
+		/* 代码增加_end  By  www.68ecshop.com */
+		
         sys_msg($note, 0, $link);
     }
     else

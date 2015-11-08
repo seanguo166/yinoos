@@ -13,7 +13,7 @@
  *  define('ROOT_PATH',                     '网站根目录')
  *
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -36,6 +36,7 @@ class cls_image
     var $data_dir    = DATA_DIR;
     var $bgcolor     = '';
     var $type_maping = array(1 => 'image/gif', 2 => 'image/jpeg', 3 => 'image/png');
+    var $create_pic_name = '';
 
     function __construct($bgcolor='')
     {
@@ -109,7 +110,7 @@ class cls_image
         }
 
         /* 允许上传的文件类型 */
-        $allow_file_types = '|GIF|JPG|JEPG|PNG|BMP|SWF|';
+        $allow_file_types = '|GIF|JPG|JEPG|JPEG|PNG|BMP|SWF|';
         if (!check_file_type($upload['tmp_name'], $img_name, $allow_file_types))
         {
             $this->error_msg = $GLOBALS['_LANG']['invalid_upload_image_type'];
@@ -256,10 +257,14 @@ class cls_image
         }
 
         /* 如果文件名为空，生成不重名随机文件名 */
-        $filename = $this->unique_name($dir);
+        if(empty($this->create_pic_name)){
+        	$filename = $this->unique_name($dir);
+        }else{
+        	$filename = $this->create_pic_name;
+        }
 
         /* 生成文件 */
-        if (function_exists('imagejpeg'))
+	if (function_exists('imagejpeg'))
         {
             $filename .= '.jpg';
             imagejpeg($img_thumb, $dir . $filename);

@@ -1,25 +1,22 @@
 <?php
-//888
+
 /**
  * ECSHOP 管理中心团购商品管理
  * ============================================================================
- * 版权所有 2005-2010 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
- * $Author: liuhui $
- * $Id: group_buy.php 17063 2010-03-25 06:35:46Z liuhui $
+ * $Author: liubo $
+ * $Id: group_buy.php 17217 2011-01-19 06:29:08Z liubo $
  */
 
 define('IN_ECS', true);
 require(dirname(__FILE__) . '/includes/init.php');
 require_once(ROOT_PATH . 'includes/lib_goods.php');
 require_once(ROOT_PATH . 'includes/lib_order.php');
-include_once(ROOT_PATH . '/includes/cls_image.php');
-$image = new cls_image($_CFG['bgcolor']);
-$exc = new exchange($ecs->table('goods_activity'), $db, 'act_id', 'act_name');
 
 /* 检查权限 */
 admin_priv('group_by');
@@ -82,8 +79,6 @@ elseif ($_REQUEST['act'] == 'query')
 
 elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
 {
-	include_once(ROOT_PATH . 'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
-	
     /* 初始化/取得团购活动信息 */
     if ($_REQUEST['act'] == 'add')
     {
@@ -93,7 +88,6 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
             'end_time'      => date('Y-m-d', time() + 4 * 86400),
             'price_ladder'  => array(array('amount' => 0, 'price' => 0))
         );
-		create_html_editor('act_desc');
     }
     else
     {
@@ -103,7 +97,6 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
             die('invalid param');
         }
         $group_buy = group_buy_info($group_buy_id);
-		create_html_editor('act_desc',$group_buy['act_desc']);
     }
     $smarty->assign('group_buy', $group_buy);
 
@@ -355,7 +348,6 @@ elseif ($_REQUEST['act'] =='insert_update')
         $sql = "UPDATE " . $ecs->table('goods_activity') .
                 " SET is_finished = '" . GBS_FAIL . "', " .
                     "act_desc = '$_POST[act_desc]' " .
-					"group_title = '$_POST[group_title]' " .
                 "WHERE act_id = '$group_buy_id' LIMIT 1";
         $db->query($sql);
 
@@ -437,36 +429,6 @@ elseif ($_REQUEST['act'] =='insert_update')
         $goods_name = $db->getOne("SELECT goods_name FROM " . $ecs->table('goods') . " WHERE goods_id = '$goods_id'");
 
         $act_name = empty($_POST['act_name']) ? $goods_name : sub_str($_POST['act_name'], 0, 255, false);
-		
-		//新增团购图片
-		$group_img ='data/group_img/'.basename($image->upload_image($_FILES['group_img'],'group_img'));
-		$isg_new = intval($_POST['isg_new']);
-		$isg_rs = intval($_POST['isg_rs']);
-		$group_rs = intval($_POST['group_rs']);
-		if ($group_rs=='')
-		{
-		   $group_rs = rand(123,500);
-        }		
-		//验证图片是否存在
-		if ($group_buy_id > 0)
-        {
-			if($group_img=='data/group_img/')
-			{
-				$group_img=$db->getOne("SELECT group_img FROM " . $ecs->table('goods_activity') . " WHERE act_id = '$group_buy_id'");
-				}
-			else
-			{
-				$group_img_old=$db->getOne("SELECT group_img FROM " . $ecs->table('goods_activity') . " WHERE act_id = '$group_buy_id'");
-				@unlink("../".$group_img_old);
-				}
-		}
-		else
-		{
-			if($group_img=='data/group_img/')
-			{
-				sys_msg($_LANG['error_group_img']);
-				}
-			}
 
         $deposit = floatval($_POST['deposit']);
         if ($deposit < 0)
@@ -532,12 +494,7 @@ elseif ($_REQUEST['act'] =='insert_update')
 
         $group_buy = array(
             'act_name'   => $act_name,
-			'group_img'  => $group_img,
-			'isg_new'  => $isg_new,
-			'isg_rs'  => $isg_rs,
-			'group_rs'  => $group_rs,
             'act_desc'   => $_POST['act_desc'],
-			'group_title'   => $_POST['group_title'],
             'act_type'   => GAT_GROUP_BUY,
             'goods_id'   => $goods_id,
             'goods_name' => $goods_name,
@@ -820,7 +777,7 @@ function group_buy_list()
         $arr['start_time']  = local_date($GLOBALS['_CFG']['date_format'], $arr['start_time']);
         $arr['end_time']    = local_date($GLOBALS['_CFG']['date_format'], $arr['end_time']);
         $arr['cur_status']  = $GLOBALS['_LANG']['gbs'][$status];
-		 
+
         $list[] = $arr;
     }
     $arr = array('item' => $list, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);

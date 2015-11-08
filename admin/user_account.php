@@ -3,7 +3,7 @@
 /**
  * ECSHOP 会员帐目管理(包括预付款，余额)
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -358,6 +358,18 @@ elseif ($_REQUEST['act'] == 'action')
 
             //更新会员余额数量
             log_account_change($account['user_id'], $amount, 0, 0, 0, $_LANG['surplus_type_1'], ACT_DRAWING);
+			//是否开启余额变动给客户发短信 -提现
+			if($_CFG['sms_user_money_change'] == 1)
+			{
+				$sql = "SELECT user_money,mobile_phone FROM " . $GLOBALS['ecs']->table('users') . " WHERE user_id = '" . $account['user_id'] . "'";
+				$users = $GLOBALS['db']->getRow($sql);
+				$content = sprintf($_CFG['sms_deposit_balance_reduce_tpl'],date("Y-m-d H:i:s",gmtime()),$amount,$users['user_money'],$_CFG['sms_sign']);
+				if($users['mobile_phone'])
+				{
+					include_once('../send.php');
+					sendSMS($users['mobile_phone'],$content); 
+				}
+			}
         }
         elseif ($is_paid == '1' && $account['process_type'] == '0')
         {

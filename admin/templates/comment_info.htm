@@ -8,21 +8,12 @@
       <td>
       <a href="mailto:{$msg.email}"><b>{if $msg.user_name}{$msg.user_name}{else}{$lang.anonymous}{/if}</b></a>&nbsp;{$lang.from}
       &nbsp;{$msg.add_time}&nbsp;{$lang.to}&nbsp;<b>{$id_value}</b>&nbsp;{$lang.send_comment}
+      <span style="float:right;"><img src="images/stars{$msg.comment_rank}.gif" /></span>
     </td>
     </tr>
     <tr>
       <td><hr color="#dadada" size="1"></td>
     </tr>
-	{if $msg.order_id > 0}
-	<tr>
-      <td>
-      类型:<font color="#FF0000">用户晒单</font>&nbsp;<a href="order.php?act=info&order_id={$msg.order_id}" target="_blank">订单详情页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="article.php?act=edit&id={$msg.art_id}" target="_blank">晒单详情页</a>
-    </td>
-    </tr>
-    <tr>
-      <td><hr color="#dadada" size="1"></td>
-    </tr>
-	{/if}
     <tr>
       <td>
         <div style="overflow:hidden; word-break:break-all;">{$msg.content}</div>

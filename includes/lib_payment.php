@@ -157,62 +157,70 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
             /* 根据记录类型做相应处理 */
             if ($pay_log['order_type'] == PAY_ORDER)
             {
-                /* 取得订单信息 */
-                $sql = 'SELECT order_id, user_id, order_sn, consignee, address, tel, shipping_id, extension_code, extension_id, goods_amount ' .
+                /* 取得订单信息 */ //jx
+                $sql = 'SELECT order_id, user_id,supplier_id, order_sn, consignee, address, tel,mobile, shipping_id, extension_code, extension_id, goods_amount ' .
                         'FROM ' . $GLOBALS['ecs']->table('order_info') .
-                       " WHERE order_id = '$pay_log[order_id]'";
-                $order    = $GLOBALS['db']->getRow($sql);
-                $order_id = $order['order_id'];
-                $order_sn = $order['order_sn'];
-
-                /* 修改订单状态为已付款 */
-                $sql = 'UPDATE ' . $GLOBALS['ecs']->table('order_info') .
-                            " SET order_status = '" . OS_CONFIRMED . "', " .
-                                " confirm_time = '" . gmtime() . "', " .
-                                " pay_status = '$pay_status', " .
-                                " pay_time = '".gmtime()."', " .
-                                " money_paid = order_amount," .
-                                " order_amount = 0 ".
-                       "WHERE order_id = '$order_id'";
-                $GLOBALS['db']->query($sql);
-
-                /* 记录订单操作记录 */
-                order_action($order_sn, OS_CONFIRMED, SS_UNSHIPPED, $pay_status, $note, $GLOBALS['_LANG']['buyer']);
-
-                /* 如果需要，发短信 */
-                if ($GLOBALS['_CFG']['sms_order_payed'] == '1' && $GLOBALS['_CFG']['sms_shop_mobile'] != '')
-                {
-                    include_once(ROOT_PATH.'includes/cls_sms.php');
-                    $sms = new sms();
-                    $sms->send($GLOBALS['_CFG']['sms_shop_mobile'],
-                        sprintf($GLOBALS['_LANG']['order_payed_sms'], $order_sn, $order['consignee'], $order['tel']),'', 13,1);
-                }
-
-                /* 对虚拟商品的支持 */
-                $virtual_goods = get_virtual_goods($order_id);
-                if (!empty($virtual_goods))
-                {
-                    $msg = '';
-                    if (!virtual_goods_ship($virtual_goods, $msg, $order_sn, true))
-                    {
-                        $GLOBALS['_LANG']['pay_success'] .= '<div style="color:red;">'.$msg.'</div>'.$GLOBALS['_LANG']['virtual_goods_ship_fail'];
-                    }
-
-                    /* 如果订单没有配送方式，自动完成发货操作 */
-                    if ($order['shipping_id'] == -1)
-                    {
-                        /* 将订单标识为已发货状态，并记录发货记录 */
-                        $sql = 'UPDATE ' . $GLOBALS['ecs']->table('order_info') .
-                               " SET shipping_status = '" . SS_SHIPPED . "', shipping_time = '" . gmtime() . "'" .
-                               " WHERE order_id = '$order_id'";
-                        $GLOBALS['db']->query($sql);
-
-                         /* 记录订单操作记录 */
-                        order_action($order_sn, OS_CONFIRMED, SS_SHIPPED, $pay_status, $note, $GLOBALS['_LANG']['buyer']);
-                        $integral = integral_to_give($order);
-                        log_account_change($order['user_id'], 0, 0, intval($integral['rank_points']), intval($integral['custom_points']), sprintf($GLOBALS['_LANG']['order_gift_integral'], $order['order_sn']));
-                    }
-                }
+                       " WHERE order_id = '$pay_log[order_id]' OR parent_order_id = '$pay_log[order_id]' ";
+                $orderinfo    = $GLOBALS['db']->getAll($sql);
+               foreach($orderinfo as $key => $order){
+	                $order_id = $order['order_id'];
+	                $order_sn = $order['order_sn'];
+					$mobile = $order['mobile'];
+					$suppid = $order['supplier_id'];//jx
+					$supplier[$suppid]	 = $order_sn;//jx
+	
+	                /* 修改订单状态为已付款 */
+	                $sql = 'UPDATE ' . $GLOBALS['ecs']->table('order_info') .
+	                            " SET order_status = '" . OS_CONFIRMED . "', " .
+	                                " confirm_time = '" . gmtime() . "', " .
+	                                " pay_status = '$pay_status', " .
+	                                " pay_time = '".gmtime()."', " .
+	                                " money_paid = order_amount," .
+	                                " order_amount = 0 ".
+	                       "WHERE order_id = '$order_id'";
+	                $GLOBALS['db']->query($sql);
+	
+	                /* 记录订单操作记录 */
+	                order_action($order_sn, OS_CONFIRMED, SS_UNSHIPPED, $pay_status, $note, $GLOBALS['_LANG']['buyer']);
+	
+	                /* 如果需要，发短信 */
+	               include_once(ROOT_PATH.'send.php');
+				   //付款给商家发短信
+				   send_sms($supplier,$_CFG['sms_order_payed_tpl'],2);
+				   //付款给客户发短信
+				   if($GLOBALS['_CFG']['sms_order_pay'] == 1)
+				   {
+					   $content = sprintf($GLOBALS['_CFG']['sms_order_pay_tpl'],$order_sn,$GLOBALS['_CFG']['sms_sign']);
+					   sendSMS($mobile,$content); 
+				   }
+					
+	
+	                /* 对虚拟商品的支持 */
+	                $virtual_goods = get_virtual_goods($order_id);
+	                if (!empty($virtual_goods))
+	                {
+	                    $msg = '';
+	                    if (!virtual_goods_ship($virtual_goods, $msg, $order_sn, true))
+	                    {
+	                        $GLOBALS['_LANG']['pay_success'] .= '<div style="color:red;">'.$msg.'</div>'.$GLOBALS['_LANG']['virtual_goods_ship_fail'];
+	                    }
+	
+	                    /* 如果订单没有配送方式，自动完成发货操作 */
+	                    if ($order['shipping_id'] == -1)
+	                    {
+	                        /* 将订单标识为已发货状态，并记录发货记录 */
+	                        $sql = 'UPDATE ' . $GLOBALS['ecs']->table('order_info') .
+	                               " SET shipping_status = '" . SS_SHIPPED . "', shipping_time = '" . gmtime() . "'" .
+	                               " WHERE order_id = '$order_id'";
+	                        $GLOBALS['db']->query($sql);
+	
+	                         /* 记录订单操作记录 */
+	                        order_action($order_sn, OS_CONFIRMED, SS_SHIPPED, $pay_status, $note, $GLOBALS['_LANG']['buyer']);
+	                        $integral = integral_to_give($order);
+	                        log_account_change($order['user_id'], 0, 0, intval($integral['rank_points']), intval($integral['custom_points']), sprintf($GLOBALS['_LANG']['order_gift_integral'], $order['order_sn']));
+	                    }
+	                }
+               }
 
             }
             elseif ($pay_log['order_type'] == PAY_SURPLUS)
@@ -236,6 +244,17 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
                     $_LANG = array();
                     include_once(ROOT_PATH . 'languages/' . $GLOBALS['_CFG']['lang'] . '/user.php');
                     log_account_change($arr['user_id'], $arr['amount'], 0, 0, 0, $_LANG['surplus_type_0'], ACT_SAVING);
+					  /* 如果需要，发短信 */
+	               include_once(ROOT_PATH.'send.php');
+				   //付款给商家发短信
+				   send_sms($supplier,$_CFG['sms_order_payed_tpl'],2);
+				   
+				   //付款给客户发短信
+				   if($GLOBALS['_CFG']['sms_order_pay'] == 1)
+				   {
+					   $content = sprintf($GLOBALS['_CFG']['sms_order_pay_tpl'],$order_sn,$GLOBALS['_CFG']['sms_sign']);
+					   sendSMS($mobile,$content); 
+				   }
                 }
             }
         }

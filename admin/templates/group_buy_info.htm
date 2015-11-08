@@ -1,4 +1,4 @@
-<!--//888 $Id: group_buy_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+<!-- $Id: group_buy_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
 {include file="pageheader.htm"}
 {insert_scripts files="validator.js,../js/utils.js"}
 
@@ -19,7 +19,7 @@
   </form>
 </div>
 
-<form method="post" action="group_buy.php?act=insert_update" name="theForm" onsubmit="return validate()" enctype="multipart/form-data">
+<form method="post" action="group_buy.php?act=insert_update" name="theForm" onsubmit="return validate()">
 <div class="main-div">
 <table id="group-table" cellspacing="1" cellpadding="3" width="100%">
   <tr>
@@ -31,34 +31,6 @@
       <option value="0">{$lang.notice_goods_name}</option>
       {/if}
     </select>    </td>
-  </tr>
-    <tr>
-    <td class="label">团购标题：</td>
-    <td>
-	  <textarea  name="group_title" cols="40" rows="3"  >{$group_buy.group_title}</textarea>
-    </td>
-  </tr>
-  <tr>
-    <td class="label">团购图片：</td>
-    <td>
-      <input type="file" name="group_img" size="35" />  {if $group_buy.group_img}
-                <a href="../{$group_buy.group_img}" target="_blank"><img src="images/yes.gif" border="0" /></a>
-              {else}
-                <img src="images/no.gif" />
-              {/if}
-    </td>
-  </tr>
-    <tr>
-    <td class="label">热门团购：</td>
-    <td>
-      <input type="checkbox" name="isg_new" value="1" {if $group_buy.isg_new eq 1}checked="checked"{/if} />
-    </td>
-  </tr>
-      <tr>
-    <td class="label">团购人数：</td>
-    <td>
-      <input type="checkbox" name="isg_rs" value="1" {if $group_buy.isg_rs eq 1}checked="checked"{/if} /> 启用虚假人数 <input name="group_rs" type="text" id="group_rs" value="{$group_buy.group_rs}" size="10"> (没填写随机123-500中1个数字)
-    </td>
   </tr>
   <tr>
     <td class="label">{$lang.label_start_date}</td>
@@ -104,8 +76,7 @@
   {/foreach}
   <tr>
     <td class="label">{$lang.label_desc}</td>
-    <td>
-    {$FCKeditor}
+    <td><textarea  name="act_desc" cols="40" rows="3"  >{$group_buy.act_desc}</textarea></td>
   </tr>
   <tr>
     <td class="label">&nbsp;</td>
@@ -125,7 +96,6 @@
 </table>
 </div>
 </form>
-
 <script language="JavaScript">
 <!--
 {literal}

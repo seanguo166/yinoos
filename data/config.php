@@ -3,18 +3,18 @@
 $db_host   = "localhost:3306";
 
 // database name
-$db_name   = "yinoos";
+$db_name   = "ecshop";
 
 // database username
-$db_user   = "root";
+$db_user   = "ecshop";
 
 // database password
-$db_pass   = "device16599708";
+$db_pass   = "2313298";
 
 // table prefix
 $prefix    = "ecs_";
 
-$timezone    = "Asia/Shanghai";
+$timezone    = "PRC";
 
 $cookie_path    = "/";
 
@@ -24,12 +24,15 @@ $session = "1440";
 
 define('EC_CHARSET','utf-8');
 
+if(!defined('ADMIN_PATH'))
+{
 define('ADMIN_PATH','admin');
+}
 
 define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2015-11-07 19:05:20');
+define('API_TIME', '2015-10-22 00:30:09');
 
 ?>

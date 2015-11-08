@@ -133,8 +133,6 @@ $_LANG['caches_cleared'] = 'The page cache has be cleared successfully.';
 //-- About us
 /*------------------------------------------------------ */
 $_LANG['team_member'] ='ECSHOP team member';
-$_LANG['before_team_member'] = 'ECSHOP Contributor';
-
 $_LANG['director'] ='Director';
 $_LANG['programmer'] ='Programmer';
 $_LANG['ui_designer'] ='Designer';

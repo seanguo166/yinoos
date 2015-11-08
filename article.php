@@ -3,14 +3,14 @@
 /**
  * ECSHOP 文章内容
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2010 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
- * $Author: liubo $
- * $Id: article.php 17217 2011-01-19 06:29:08Z liubo $
+ * $Author: liuhui $
+ * $Id: article.php 17069 2010-03-26 05:28:01Z liuhui $
 */
 
 define('IN_ECS', true);
@@ -26,7 +26,11 @@ if ((DEBUG_MODE & 2) != 2)
 //-- INPUT
 /*------------------------------------------------------ */
 
-$_REQUEST['id'] = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
+// safety_20150629 change_start
+
+$_REQUEST['id'] = (isset($_REQUEST['id']) && preg_match('/^-?[1-9]\d*$/', $_REQUEST['id'])) ? intval($_REQUEST['id']) : 0;
+
+// safety_20150629 change_end
 $article_id     = $_REQUEST['id'];
 if(isset($_REQUEST['cat_id']) && $_REQUEST['cat_id'] < 0)
 {
@@ -70,8 +74,6 @@ if (!$smarty->is_cached('article.dwt', $cache_id))
     $smarty->assign('email',            $_SESSION['email']);
     $smarty->assign('type',            '1');
     $smarty->assign('promotion_info', get_promotion_info());
-	
-	$smarty->assign('top_art_cat_id',            get_top_art_cat_id($article['cat_id']));//888
 
     /* 验证码相关设置 */
     if ((intval($_CFG['captcha']) & CAPTCHA_COMMENT) && gd_version() > 0)
@@ -96,6 +98,8 @@ if (!$smarty->is_cached('article.dwt', $cache_id))
     $smarty->assign('page_title',   $position['title']);    // 页面标题
     $smarty->assign('ur_here',      $position['ur_here']);  // 当前位置
     $smarty->assign('comment_type', 1);
+	$smarty->assign('topcatid',array_pop($catlist));
+
 
     /* 相关商品 */
     $sql = "SELECT a.goods_id, g.goods_name " .
@@ -211,5 +215,7 @@ function article_related_goods($id)
 
     return $arr;
 }
-
+/* 代码增加_start  By  www.68ecshop.com */
+make_html();
+/* 代码增加_end   By  www.68ecshop.com */
 ?>

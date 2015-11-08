@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心商店设置
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -29,7 +29,7 @@ else
 
 $sess_id = $GLOBALS['sess']->get_session_id();
 
-$auth = mktime();
+$auth = local_mktime(); //代码修改  By www.68ecshop.com
 $ac = md5($certi_id.'SHOPEX_SMS'.$auth);
 $url = 'http://service.shopex.cn/sms/index.php?certificate_id='.$certi_id.'&sess_id='.$sess_id.'&auth='.$auth.'&ac='.$ac;
 
@@ -76,6 +76,8 @@ if ($_REQUEST['act'] == 'list_edit')
             $smarty->assign('cities', get_regions(2, $_CFG['shop_province']));
         }
     }
+	//echo "<pre>";
+	//print_r($_CFG);
     $smarty->assign('cfg', $_CFG);
 
     assign_query_info();
@@ -208,10 +210,15 @@ elseif ($_REQUEST['act'] == 'post')
             }
             $_POST['invoice_rate'][$key] = $rate;
         }
+	
+		/*增值税发票_更改_START_www.68ecshop.com*/
         $invoice = array(
             'type' => $_POST['invoice_type'],
-            'rate' => $_POST['invoice_rate']
+            'rate' => $_POST['invoice_rate'],
+            'enable' => $_POST['invoice_enable']
         );
+		/*增值税发票_更改_END_www.68ecshop.com*/
+		
         $sql = "UPDATE " . $ecs->table('shop_config') . " SET value = '" . serialize($invoice) . "' WHERE code = 'invoice_type'";
         $db->query($sql);
     }
@@ -228,6 +235,7 @@ elseif ($_REQUEST['act'] == 'post')
     $shop_province  = $db->getOne("SELECT region_name FROM ".$ecs->table('region')." WHERE region_id='$_CFG[shop_province]'");
     $shop_city      = $db->getOne("SELECT region_name FROM ".$ecs->table('region')." WHERE region_id='$_CFG[shop_city]'");
 
+/*
     $spt = '<script type="text/javascript" src="http://api.ecshop.com/record.php?';
     $spt .= "url=" .urlencode($ecs->url());
     $spt .= "&shop_name=" .urlencode($_CFG['shop_name']);
@@ -241,6 +249,8 @@ elseif ($_REQUEST['act'] == 'post')
     $spt .= "&version=".VERSION."&language=$_CFG[lang]&php_ver=" .PHP_VERSION. "&mysql_ver=" .$db->version();
     $spt .= "&charset=".EC_CHARSET;
     $spt .= '"></script>';
+	*/
+	$spt='';
 
     if ($type == 'mail_setting')
     {

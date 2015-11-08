@@ -1,5 +1,9 @@
 <?php if ($this->_var['user_info']): ?>
-<a href="user.php" target="_blank" class="red" style="display:inline-block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:40px; padding:0px 3px"><?php echo $this->_var['user_info']['username']; ?></a> <span id="JS_head_sita_name_haier">欢迎光临！</span><em class="line"></em><a href="user.php?act=logout" class="red" id="JS_login_out" >[退出]</a>
-<?php else: ?>
-<span><?php echo $this->_var['lang']['welcome']; ?>！</span><em class="line"></em><a href="user.php" title="登录">登录</a><em class="line"></em><a href="user.php?act=register" title="免费注册">注册</a>
+<em><?php echo $this->_var['user_info']['username']; ?> <?php echo $this->_var['lang']['welcome_return']; ?>！</em> 
+<a class="sn-login" href="user.php" target="_top"><?php echo $this->_var['lang']['user_center']; ?></a>
+<a class="sn-register" href="user.php?act=logout" target="_top"><?php echo $this->_var['lang']['user_logout']; ?></a> 
+<?php else: ?> 
+<em><?php echo $this->_var['lang']['welcome']; ?>!</em>
+<a class="sn-login" href="user.php" target="_top">请登录</a>
+<a class="sn-register" href="register.php" target="_top">免费注册</a> 
 <?php endif; ?>

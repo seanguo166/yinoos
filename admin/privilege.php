@@ -114,6 +114,9 @@ elseif ($_REQUEST['act'] == 'signin')
         // 登录成功
         set_admin_session($row['user_id'], $row['user_name'], $row['action_list'], $row['last_login']);
         $_SESSION['suppliers_id'] = $row['suppliers_id'];
+		//dqy add start 2012-12-10
+		$_SESSION['user_name'] =$row['user_name'];
+		//dqy add end 2012-12-10
 		if(empty($row['ec_salt']))
 	    {
 			$ec_salt=rand(1,9999);
@@ -721,8 +724,13 @@ function clear_cart()
     $valid_sess = $GLOBALS['db']->getCol($sql);
 
     // 删除cart中无效的数据
+
+	/* 代码修改_start  By  www.68ecshop.com */
+	$time_valid = gmtime() - 86400*7;
     $sql = "DELETE FROM " . $GLOBALS['ecs']->table('cart') .
-            " WHERE session_id NOT " . db_create_in($valid_sess);
+            " WHERE  add_time < '". $time_valid ."' AND  session_id NOT " . db_create_in($valid_sess);
+	/* 代码修改_end  By  www.68ecshop.com */
+
     $GLOBALS['db']->query($sql);
 }
 
@@ -737,3 +745,4 @@ function get_role_list()
 }
 
 ?>
+

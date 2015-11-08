@@ -3,7 +3,7 @@
 /**
  * ECSHOP 管理中心供货商管理
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -252,6 +252,11 @@ elseif ($_REQUEST['act'] == 'batch')
                 sys_msg($_LANG['batch_drop_no']);
             }
 
+            $suppliers_names = '';
+            foreach ($suppliers as $value)
+            {
+                $suppliers_names .= $value['suppliers_name'] . '|';
+            }
 
             $sql = "DELETE FROM " . $ecs->table('suppliers') . "
                 WHERE suppliers_id " . db_create_in($ids);
@@ -266,7 +271,6 @@ elseif ($_REQUEST['act'] == 'batch')
             }
 
             /* 记日志 */
-            $suppliers_names = '';
             foreach ($suppliers as $value)
             {
                 $suppliers_names .= $value['suppliers_name'] . '|';
@@ -309,24 +313,6 @@ elseif (in_array($_REQUEST['act'], array('add', 'edit')))
 
         $smarty->assign('form_action', 'insert');
         $smarty->assign('suppliers', $suppliers);
-		
-		/* 取得国家 */
-            $smarty->assign('country_list', get_regions());
-            if ($order['country'] > 0)
-            {
-                /* 取得省份 */
-                $smarty->assign('province_list', get_regions(1, $order['country']));
-                if ($order['province'] > 0)
-                {
-                    /* 取得城市 */
-                    $smarty->assign('city_list', get_regions(2, $order['province']));
-                    if ($order['city'] > 0)
-                    {
-                        /* 取得区域 */
-                        $smarty->assign('district_list', get_regions(3, $order['city']));
-                    }
-                }
-            }
 
         assign_query_info();
 
@@ -345,22 +331,6 @@ elseif (in_array($_REQUEST['act'], array('add', 'edit')))
         {
             sys_msg('suppliers does not exist');
         }
-		
-		
-		
-		$suppliers['country']  = isset($suppliers['country'])  ? intval($suppliers['country'])  : 0;
-        $suppliers['province'] = isset($suppliers['province']) ? intval($suppliers['province']) : 0;
-        $suppliers['city']     = isset($suppliers['city'])     ? intval($suppliers['city'])     : 0;
-
-        $province_list = get_regions(1, $suppliers['country']);
-        $city_list     = get_regions(2, $suppliers['province']);
-        $district_list = get_regions(3, $suppliers['city']);
-		
-		$smarty->assign('country_list',       get_regions());
-		$smarty->assign('province_list',       $province_list);
-		$smarty->assign('city_list',       $city_list);
-		$smarty->assign('district_list',       $district_list);
-		
 
         /* 取得所有管理员，*/
         /* 标注哪些是该供货商的('this')，哪些是空闲的('free')，哪些是别的供货商的('other') */
@@ -394,29 +364,14 @@ elseif (in_array($_REQUEST['act'], array('insert', 'update')))
 {
     /* 检查权限 */
     admin_priv('suppliers_manage');
-	
-	include_once(ROOT_PATH . 'includes/cls_image.php');
-	$image = new cls_image($_CFG['bgcolor']);
 
     if ($_REQUEST['act'] == 'insert')
     {
         /* 提交值 */
         $suppliers = array('suppliers_name'   => trim($_POST['suppliers_name']),
-		                   'logo'   => trim($_POST['logo']),
-		                   'country'   => trim($_POST['country']),
-						   'province'   => trim($_POST['province']),
-						   'city'   => trim($_POST['city']),
-						   'district'   => trim($_POST['district']),
-						   'tel'   => trim($_POST['tel']),
-						   'work_time'   => trim($_POST['work_time']),
-						   'service'   => trim($_POST['service']),
-						   'address'   => trim($_POST['address']),
-						   'position_img'   => trim($_POST['position_img']),
-						   'line'   => trim($_POST['line']),
                            'suppliers_desc'   => trim($_POST['suppliers_desc']),
                            'parent_id'        => 0
                            );
-						   
 
         /* 判断名称是否重复 */
         $sql = "SELECT suppliers_id
@@ -426,18 +381,6 @@ elseif (in_array($_REQUEST['act'], array('insert', 'update')))
         {
             sys_msg($_LANG['suppliers_name_exist']);
         }
-		
-		$src = basename($image->upload_image($_FILES['logo'], 'suppliers'));
-		if ($src)
-		{
-			$suppliers['logo'] = '../data/suppliers/' . $src;	
-		}
-		$src = basename($image->upload_image($_FILES['position_img'], 'suppliers'));
-		if ($src)
-		{
-			$suppliers['position_img'] = '../data/suppliers/' . $src;	
-		}	
-
 
         $db->autoExecute($ecs->table('suppliers'), $suppliers, 'INSERT');
         $suppliers['suppliers_id'] = $db->insert_id();
@@ -464,25 +407,12 @@ elseif (in_array($_REQUEST['act'], array('insert', 'update')))
 
     if ($_REQUEST['act'] == 'update')
     {
-	    
         /* 提交值 */
         $suppliers = array('id'   => trim($_POST['id']));
 
         $suppliers['new'] = array('suppliers_name'   => trim($_POST['suppliers_name']),
-						   'country'   => trim($_POST['country']),
-						   'province'   => trim($_POST['province']),
-						   'city'   => trim($_POST['city']),
-						   'district'   => trim($_POST['district']),
-						   'tel'   => trim($_POST['tel']),
-						   'work_time'   => trim($_POST['work_time']),
-						   'service'   => trim($_POST['service']),
-						   'address'   => trim($_POST['address']),
-						   'line'   => trim($_POST['line']),
                            'suppliers_desc'   => trim($_POST['suppliers_desc'])
                            );
-						   
-				   
-						   
 
         /* 取得供货商信息 */
         $sql = "SELECT * FROM " . $ecs->table('suppliers') . " WHERE suppliers_id = '" . $suppliers['id'] . "'";
@@ -501,17 +431,6 @@ elseif (in_array($_REQUEST['act'], array('insert', 'update')))
         {
             sys_msg($_LANG['suppliers_name_exist']);
         }
-		
-		$src = basename($image->upload_image($_FILES['logo'], 'suppliers'));
-		if ($src)
-		{
-			$suppliers['new']['logo'] = '../data/suppliers/' . $src;	
-		}
-		$src = basename($image->upload_image($_FILES['position_img'], 'suppliers'));
-		if ($src)
-		{
-			$suppliers['new']['position_img'] = '../data/suppliers/' . $src;	
-		}		
 
         /* 保存供货商信息 */
         $db->autoExecute($ecs->table('suppliers'), $suppliers['new'], 'UPDATE', "suppliers_id = '" . $suppliers['id'] . "'");

@@ -3,7 +3,7 @@
 /**
  * ECSHOP 专题前台
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -63,7 +63,7 @@ if (!$smarty->is_cached($templates, $cache_id))
 
     $sql = 'SELECT g.goods_id, g.goods_name, g.goods_name_style, g.market_price, g.is_new, g.is_best, g.is_hot, g.shop_price AS org_price, ' .
                 "IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS shop_price, g.promote_price, " .
-                'g.promote_start_date, g.promote_end_date, g.goods_brief, g.goods_thumb , g.goods_img ' .
+                'g.promote_start_date, g.promote_end_date, g.goods_brief, g.goods_thumb , g.goods_img , g.original_img ' .
                 'FROM ' . $GLOBALS['ecs']->table('goods') . ' AS g ' .
                 'LEFT JOIN ' . $GLOBALS['ecs']->table('member_price') . ' AS mp ' .
                 "ON mp.goods_id = g.goods_id AND mp.user_rank = '$_SESSION[user_rank]' " .
@@ -99,6 +99,7 @@ if (!$smarty->is_cached($templates, $cache_id))
         $row['short_name']       = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
                                     sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
         $row['goods_thumb']      = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+		$row['original_img']    	 = get_image_path($row['goods_id'], $row['original_img']);
         $row['short_style_name'] = add_style($row['short_name'], $row['goods_name_style']);
 
         foreach ($arr AS $key => $value)
@@ -132,4 +133,7 @@ if (!$smarty->is_cached($templates, $cache_id))
 /* 显示模板 */
 $smarty->display($templates, $cache_id);
 
+/* 代码增加_start  By  www.68ecshop.com   */
+make_html();
+/* 代码增加_end  By  www.68ecshop.com   */
 ?>

@@ -3,7 +3,7 @@
 /**
  * ECSHOP 广告处理文件
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -17,16 +17,21 @@ define('IN_ECS', true);
 define('INIT_NO_SMARTY', true);
 require(dirname(__FILE__) . '/includes/init.php');
 
-/* 没有指定广告的id及跳转地址 */
-if (empty($_GET['ad_id']))
+/* 是否指定广告的id及跳转地址 */
+
+// safety_20150629 change_start
+
+if (!empty($_GET['ad_id']) && preg_match('/^-?[1-9]\d*$/', $_REQUEST['ad_id']))
+{
+	$ad_id = intval($_GET['ad_id']);
+}
+else
 {
     ecs_header("Location: index.php\n");
     exit;
 }
-else
-{
-    $ad_id = intval($_GET['ad_id']);
-}
+
+// safety_20150629 change_end
 
 /* act 操作项的初始化*/
 $_GET['act'] = !empty($_GET['act']) ? trim($_GET['act']) : '';
@@ -97,8 +102,7 @@ if ($_GET['act'] == 'js')
 else
 {
     /* 获取投放站点的名称 */
-
-    $site_name = !empty($_GET['from']) ?htmlspecialchars($_GET['from'])  : addslashes($_LANG['self_site']);
+    $site_name = !empty($_GET['from']) ? addslashes($_GET['from']) : addslashes($_LANG['self_site']);
 
     /* 商品的ID */
     $goods_id = !empty($_GET['goods_id']) ? intval($_GET['goods_id']) : 0;
@@ -148,12 +152,10 @@ else
         }
         $db->query($sql);
 
-        $sql="SELECT * FROM ". $ecs->table('ad') ." WHERE ad_id = '$ad_id'";
-        $ad_info=$db->getRow($sql);
         /* 跳转到广告的链接页面 */
-        if (!empty($ad_info['ad_link']))
+        if (!empty($_GET['uri']))
         {
-            $uri = (strpos($ad_info['ad_link'], 'http://') === false && strpos($ad_info['ad_link'], 'https://') === false ) ? $ecs->http() . urldecode($ad_info['ad_link']) : urldecode($ad_info['ad_link']);
+            $uri = (strpos($_GET['uri'], 'http://') === false && strpos($_GET['uri'], 'https://') === false) ? $ecs->http() . urldecode($_GET['uri']) : urldecode($_GET['uri']);
         }
         else
         {

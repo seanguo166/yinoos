@@ -1,76 +1,47 @@
-
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>{if $brand_id}{$brands_array.brand.name}{else}所有品牌{/if} - {$shop_name}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="author" content="ecdaddy.com">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
-<meta name="apple-touch-fullscreen" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" type="text/css" href="style/base.css?v=mzw" />
-{insert_scripts files='../../js/transport.js,../js/utils.js'}
-<script type="text/javascript">
-function add_num(rec_id,goods_id){
-	document.getElementById("goods_number_"+rec_id+"").value++;
-	var number = document.getElementById("goods_number_"+rec_id+"").value;
-	//Ajax.call('cart.php', 'act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
-	Ajax.call('cart.php?act=update_group_cart', 'rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
-
-}
-
-function red_num(rec_id,goods_id){
-	if (document.getElementById("goods_number_"+rec_id+"").value>=1){
-		document.getElementById("goods_number_"+rec_id+"").value--;
-	}
-	var number = document.getElementById("goods_number_"+rec_id+"").value;
-	Ajax.call('cart.php', 'act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
-}
-
-function change_price(rec_id,goods_id){
-	var number = document.getElementById("goods_number_"+rec_id+"").value;
-	Ajax.call('cart.php','act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
-}
-
-function changePriceResponse(result){
-	document.getElementById('cartnum').innerHTML = result.cartnum;
-}
-</script>
+<title>ECShop_mobile</title>
 </head>
+
 <body>
-{include file='head1.html'}
-<div style="margin-top: 8px;padding: 10px;background-color: #f2ebe3;border-top: 1px solid #ddd2c0;border-bottom: 1px solid #ddd2c0;box-shadow: inset 0 1px 0 #fff;">{if $brand_id}{$brands_array.brand.name}{else}所有品牌{/if}</div>
-
+<p align='left'>
 {if $brand_id}
+品牌专区-{$brands_array.brand.name}<br/>
+--------------<br/>
 
-<div class="mc radius">
-	<ul class="mu-l2w">
-		{foreach from=$goods_data item=goods name=goodsit}
-		<li style="padding: 10px;border-top: none;overflow: hidden;{if $smarty.foreach.goodsit.iteration neq 1}border-top: 1px solid #DED6C9;{/if}line-height: 1.6em;">
-        <a href="goods.php?id={$goods.id}" style=" float:left;padding: .22em 0;"> <span class="mu-tmb" style="float:left;margin-right:8px;">{if $goods.i <= 3}<b style="position:absolute;padding:2px 2px 2px 2px;font-size:.65em;background:red;color:white;">HOT</b>{/if}<img src="../../{$goods.thumb}" alt="{$goods.name}" width="100" height="100"> </span></a>
-         <span><a href="goods.php?id={$goods.id}">{$goods.name}</a></span><span class="red" style="display: block;">{$goods.price}</span>
-         <p> <a href="javascript:;" class="btn_num" onclick="red_num({$goods.id},{$goods.id});" title="减少数量">-</a> 
-			<input type="text" name="goods_number[{$goods.id}]" id="goods_number_{$goods.id}" value="0" size="3" style="text-align:center;border: 1px solid #b3b3b3;" onblur="change_price({$goods.id},{$goods.id})" />
-			 <a href="javascript:;" class="btn_num" onclick="add_num({$goods.id},{$goods.id})" title="增加数量" >+</a>
-            </p>
-         </li>
-		{foreachelse}
-		暂无此类商品
-		{/foreach}
-	</ul>
-</div>
-{if $pagebar}
-{$pagebar}
-{/if}
+{if $smarty.get.order_price}
+当前为价格降序排列，<a href='brands.php?b_id={$smarty.get.b_id}{if $smarty.get.page}&page={$smarty.get.page}{/if}'>转换成价格升序排列</a>
 {else}
-{foreach from=$other_brands item=other_data}
-	{if $other_data.brand_id neq $brand_id}
-		<a style="display: inline-table;width: 30%;padding: 6px 0;text-align: center;color: #546280;font-size: .85em;" href='brands.php?b_id={$other_data.brand_id}'>{$other_data.brand_name}</a>
-	{/if}
-{/foreach}
+当前为价格升序排列，<a href='brands.php?b_id={$smarty.get.b_id}&order_price=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>转换成价格降序排列</a>
+{/if}<br/><br/>
+{foreach from=$goods_data item=goods}
+    {$goods.i}.<a href='goods.php?id={$goods.id}'>{$goods.name}</a>[{$goods.price}]<br/>
+{foreachelse}
+    暂无此类商品<br/>
+{/foreach}<br/>
+{if $pagebar}
+    {$pagebar}<br/>
 {/if}
-{include file='foot.html'}
+--------------<br/>
+{/if}
+{if $other_brands}
+{if $brand_id}其它品牌<br/>
+{else}
+所有品牌<br />
+{/if}
+--------------<br/>
+{foreach from=$other_brands item=other_data}
+    {if $other_data.brand_id neq $brand_id}
+        <a href='brands.php?b_id={$other_data.brand_id}'>{$other_data.brand_name}</a><br/>
+    {/if}
+{/foreach}
+--------------<br/>
+{/if}
+<a href="javascript:history.back(-1)">回上一页</a><br/>
+<a href='index.php'>返回首页</a>
+{$footer}
+</p>
 </body>
 </html>

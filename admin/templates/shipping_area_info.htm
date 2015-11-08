@@ -1,6 +1,6 @@
 <!-- $Id: shipping_area_info.htm 16819 2009-11-25 06:21:17Z sxc_shop $ -->
 {include file="pageheader.htm"}
-{insert_scripts files="validator.js,../js/transport.js,../js/region.js"}
+{insert_scripts files="validator.js,../js/transport.org.js,../js/region.js"}
 <div class="main-div">
 <form method="post" action="shipping_area.php" name="theForm" onsubmit="return validate()" style="background:#FFF">
 <fieldset style="border:1px solid #DDEEF2">
@@ -9,7 +9,7 @@
       <td class="label">{$lang.shipping_area_name}:</td>
 <td><input type="text" name="shipping_area_name" maxlength="60" size="30" value="{$shipping_area.shipping_area_name}" />{$lang.require_field}</td>
     </tr>
-  {if $shipping_area.shipping_code =='ems' || $shipping_area.shipping_code =='yto' || $shipping_area.shipping_code =='zto' || $shipping_area.shipping_code =='sto_express' || $shipping_area.shipping_code =='post_mail' || $shipping_area.shipping_code =='sf_express' || $shipping_area.shipping_code =='post_express' }
+  {if $shipping_area.shipping_code =='ems' || $shipping_area.shipping_code =='yto' || $shipping_area.shipping_code =='zto' || $shipping_area.shipping_code =='sto_express' || $shipping_area.shipping_code =='post_mail' || $shipping_area.shipping_code =='sf_express' || $shipping_area.shipping_code =='post_express' || $shipping_area.shipping_code =='yd_express' || $shipping_area.shipping_code =='bestex' || $shipping_area.shipping_code =='ttkd' || $shipping_area.shipping_code =='zjs' || $shipping_area.shipping_code =='qfkd' || $shipping_area.shipping_code =='deppon' }
     <tr>
     <td class="label">{$lang.fee_compute_mode}:</td>
     <td>
@@ -18,6 +18,14 @@
     </td>
     </tr>
   {/if}
+	<!--{if $shipping_area.shipping_code =='tc_express' }-->
+	<tr>
+		<td class="label">{$lang.fee_compute_mode}:</td>
+		<td>
+		<input type="radio"  {if $fee_compute_mode != 'by_number' }checked="true"{/if} onclick="compute_mode('{$shipping_area.shipping_code}','weight')" name="fee_compute_mode" value="by_weight" />{$lang.fee_by_weight}
+		</td>
+		</tr>
+	<!--{/if}-->
 <!--{if $shipping_area.shipping_code != 'cac'}-->
     {foreach from=$fields item=field}
     <!--{if $fee_compute_mode == 'by_number'}-->
@@ -34,9 +42,9 @@
         <!--{/if}-->
     <!--{else}-->
         <!--{if $field.name != 'item_fee'}-->
-            <tr id="{$field.name}">
+            <tr id="{$field.name}"  {if $field.name == 'free_money' && $shipping_area.shipping_code == 'tc_express'}style="display:none;"{/if} >		
               <td class="label">{$field.label}</td>
-              <td><input type="text" name="{$field.name}"  maxlength="60" size="20" value="{$field.value}" />{$lang.require_field}</td>
+              <td><input type="text" name="{$field.name}"  maxlength="60" size="20" value="{if $field.name == 'free_money' && $shipping_area.shipping_code == 'tc_express'}{else}{$field.value}{/if}" />{$lang.require_field}</td>
             </tr>
         <!--{else}-->
             <tr id="{$field.name}" style="display:none">

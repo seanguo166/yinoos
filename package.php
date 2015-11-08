@@ -3,7 +3,7 @@
 /**
  * ECSHOP 超值礼包列表
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2011 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
@@ -57,7 +57,7 @@ while ($row = $db->fetchRow($res))
     }
 
     $sql = "SELECT pg.package_id, pg.goods_id, pg.goods_number, pg.admin_id, ".
-           " g.goods_sn, g.goods_name, g.market_price, g.goods_thumb, ".
+           " g.goods_sn, g.goods_name, g.shop_price, g.goods_thumb, ".
            " IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS rank_price " .
            " FROM " . $GLOBALS['ecs']->table('package_goods') . " AS pg ".
            "   LEFT JOIN ". $GLOBALS['ecs']->table('goods') . " AS g ".
@@ -73,13 +73,14 @@ while ($row = $db->fetchRow($res))
     foreach($goods_res as $key => $val)
     {
         $goods_res[$key]['goods_thumb']  = get_image_path($val['goods_id'], $val['goods_thumb'], true);
-        $goods_res[$key]['market_price'] = price_format($val['market_price']);
+        $goods_res[$key]['shop_price'] = price_format($val['shop_price']);
         $goods_res[$key]['rank_price']   = price_format($val['rank_price']);
         $subtotal += $val['rank_price'] * $val['goods_number'];
     }
 
 
     $row['goods_list']    = $goods_res;
+	$row['goods_list_count'] = count($row['goods_list']);
     $row['subtotal']      = price_format($subtotal);
     $row['saving']        = price_format(($subtotal - $row['package_price']));
     $row['package_price'] = price_format($row['package_price']);

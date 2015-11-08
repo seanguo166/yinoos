@@ -14,7 +14,7 @@
 <input type="submit" value="{$lang.button_submit}" class="button" />
 </form>
 </div>
-<!--h1><span class="action-span"><a href="area_manage.php?act=add&parent_id={$parent_id}">添加地区</a></span></h1-->
+
 <!-- start category list -->
 <div class="list-div">
 <table cellspacing='1' cellpadding='3' id='listTable'>
@@ -39,7 +39,6 @@
        <a href="area_manage.php?act=list&type={$list.region_type+1}&pid={$list.region_id}" title="{$lang.manage_area}">
          {$lang.manage_area}</a>&nbsp;&nbsp;
        {/if}
-	   <a href="area_manage.php?act=edit_area&id={$list.region_id}">编缉</a>&nbsp;&nbsp;
        <a href="javascript:listTable.remove({$list.region_id}, '{$lang.area_drop_confirm}', 'drop_area')" title="{$lang.drop}">{$lang.drop}</a>
        </span>
       </td>
