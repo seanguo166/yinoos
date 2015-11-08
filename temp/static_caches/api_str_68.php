@@ -1,0 +1,3 @@
+<?php
+$data = '{"ver":" v4_1 ","name":" xjd_dan ","lang":" zh_cn ","release":" 20150811 ","php_ver":" 5.2.17 ","mysql_ver":" 5.1.65-community ","ocount":" 0 ","oamount":" 0.00 ","gcount":" 214 ","charset":" UTF-8 ","usecount":" 9 ","template":" 68ecshopcom_360buy ","style":" 0 ","url":" http:\\/\\/0838g.com\\/ ","ip":" 1.204.131.212 ","type":" 1 ","patch":" 27320130308008 ","version":{"ver":"\\u5c0f\\u4eac\\u4e1c\\u7ecf\\u5178\\u7248v4_2","down":""}}';
+?>
